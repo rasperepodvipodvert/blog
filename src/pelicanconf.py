@@ -89,9 +89,10 @@ DISPLAY_PAGES_ON_MENU = True
 # url and path settings
 RELATIVE_URLS = True
 CACHE_CONTENT = False
-STATIC_PATHS = ['icons', 'media', 'extra', 'emojify', 'stuff','robots.txt' ]
+STATIC_PATHS = ['icons', 'media', 'extra', 'emojify', 'stuff','robots.txt', 'CNAME' ]
 EXTRA_PATH_METADATA = {
     'robots.txt': {'path': 'robots.txt'},
+    'CNAME': {'path': 'CNAME'},
 }
 # article
 ARTICLE_URL = u'articles/{category}/{slug}/'
