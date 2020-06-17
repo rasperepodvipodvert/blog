@@ -219,8 +219,11 @@ if ( typeof Object.create !== 'function' ) {
 })( jQuery, window, document );
 
 $( document ).ready(function() {
+    // $('article.content').anchorific({
+    //     speed: 200, anchorClass: null, anchorText: null, spy: true, position: null, anchor: null,
+    // });
     $('article.content').anchorific({
-        speed: 200, anchorClass: null, anchorText: null, spy: true, position: null, anchor: null,
+        anchorClass: null, anchorText: null, spy: true, position: null, anchor: null,
     });
 
     var $window = $(window),

@@ -115,3 +115,26 @@ TAG_SAVE_AS = u'tag/{slug}/index.html'
 TAG_CLOUD_STEPS = True
 
 CURRENT_YEAR = datetime.date.today().year
+
+# markdown settings
+from markdown.extensions.toc import TocExtension
+from slugify import slugify
+# MARKDOWN = {
+#     'codehilite(css_class=highlight)', 'extra',
+#     TocExtension(anchorlink=True, slugify=slugify),
+# }
+MARKDOWN = {
+'extension_configs': {
+'markdown.extensions.codehilite': {'css_class': 'highlight'},
+'markdown.extensions.extra': {},
+'markdown.extensions.meta': {},
+'markdown.extensions.toc': {
+            'marker': '[TOC]',
+            'title': 'Table of Contents',
+            'anchorlink': True,
+            'permalink': False,
+            'baselevel': 1,
+        }
+},
+'output_format': 'html5',
+}

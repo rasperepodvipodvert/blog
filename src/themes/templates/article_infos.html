@@ -5,15 +5,15 @@
 
 <div class="footer art-info">
 
-    {% if article.author %}
-        {{ AUTHOR_TEXT|default('Author') }}: <a class="url fn" href="{{ SITEURL }}/{{ article.author.url }}">{{ article.author }}</a> |
-    {% endif %}
-
-    {{ CATEGORY_TEXT|default('Category') }}: <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
-
-    {% if PDF_PROCESSOR %}
-        | <a href="{{ SITEURL }}/pdf/{{ article.slug }}.pdf">{{ GETPDF_TEXT|default('Get the pdf') }}</a>
-    {% endif %}
+{#    {% if article.author %}#}
+{#        {{ AUTHOR_TEXT|default('Author') }}: <a class="url fn" href="{{ SITEURL }}/{{ article.author.url }}">{{ article.author }}</a> |#}
+{#    {% endif %}#}
+{##}
+{#    {{ CATEGORY_TEXT|default('Category') }}: <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>#}
+{##}
+{#    {% if PDF_PROCESSOR %}#}
+{#        | <a href="{{ SITEURL }}/pdf/{{ article.slug }}.pdf">{{ GETPDF_TEXT|default('Get the pdf') }}</a>#}
+{#    {% endif %}#}
 
     {% if DISQUS_SITENAME %}
         | <a href="{{ SITEURL }}/{{ article.url }}#disqus_thread">{{ COMMENTS_TEXT|default('Comments') }}</a>
