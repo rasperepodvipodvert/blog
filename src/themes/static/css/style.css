@@ -41,7 +41,8 @@ ul, label {
     background-image: url("../images/logo.png");
     background-repeat: no-repeat;
     background-position: top;
-    height: 328px;
+    height: 21em;
+    background-size: contain;
 }
 
 .logo {
@@ -732,6 +733,14 @@ ul.comment-list img {
 }
 
 @media (max-width: 768px) {
+    .header {
+    background-image: url("../images/logo.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    height: 10em;
+    background-size: contain;
+}
+
     .logo {
         height: 135px;
         width: 160px;
@@ -748,7 +757,7 @@ ul.comment-list img {
 
     .top-menu {
         width: 60%;
-        margin-top: 1.5em;
+        margin-top: 5.5em;
     }
 
     .content-grids {
@@ -975,6 +984,13 @@ ul.comment-list img {
 }
 
 @media (max-width: 480px) {
+    .header {
+    background-image: url("../images/logo.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    height: 6em;
+    background-size: contain;
+}
     .logo {
         height: 100px;
         width: 33%;
@@ -987,7 +1003,7 @@ ul.comment-list img {
 
     .top-menu {
         width: 48%;
-        margin-top: 0.5em;
+        margin-top: 2.5em;
     }
 
     .top-menu ul li a {
