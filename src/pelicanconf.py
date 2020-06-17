@@ -5,7 +5,7 @@ import datetime
 
 AUTHOR = 'ifilatov'
 SITENAME = 'blog.filatovz.ru'
-SITEURL = ''
+SITEURL = 'https://rasperepodvipodvert.github.io/pub_blog/'
 USE_FOLDER_AS_CATEGORY = True
 
 PATH = 'content'
