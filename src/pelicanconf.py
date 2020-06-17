@@ -6,7 +6,6 @@ import datetime
 AUTHOR = 'ifilatov'
 SITENAME = 'blog.filatovz.ru'
 SITEURL = ''
-
 USE_FOLDER_AS_CATEGORY = True
 
 PATH = 'content'
@@ -58,8 +57,9 @@ DEFAULT_PAGINATION = 10
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
 
-PLUGIN_PATH = ['plugins']
-PLUGINS = ['sitemap', 'neighbors', 'related_posts', 'assets']
+PLUGIN_PATHS = ['plugins']
+PLUGINS = ['sitemap', 'neighbors', 'related_posts', 'assets', 'tipue_search']
+DIRECT_TEMPLATES = ['index', 'tags', 'categories', 'authors', 'archives', 'search']
 
 SITEMAP = {
     'format': 'xml',
@@ -81,7 +81,7 @@ DISPLAY_CATEGORY_IN_BREADCRUMBS = True
 # отображение тегов
 DISPLAY_TAGS_ON_SIDEBAR = True
 # показывать в облаке или списком
-DISPLAY_TAGS_INLINE = True
+DISPLAY_TAGS_INLINE = False
 
 THEME = "themes"
 DISPLAY_PAGES_ON_MENU = True

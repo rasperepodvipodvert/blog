@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block container %}
+
+    <div class="single-main">
+        <div class="col-md-12">
+            <script src="{{ SITEURL }}/tipuesearch_content.js"></script>
+            <script>
+                $(document).ready(function () {
+                    $('#tipue_search_input').tipuesearch({
+                        'show': 20,
+                        'newWindow': false,
+                        'imageZoom': true
+                    });
+                });
+            </script>
+            <div>
+                <div id="tipue_search_content"></div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -104,38 +104,38 @@ ul, label {
     margin-left: 248px;
 }
 
-.search {
-    width: 55%;
-    position: relative;
-}
+/*.search {*/
+/*    width: 61%;*/
+/*    position: relative;*/
+/*}*/
 
-.search form {
-    border: 1px solid #dbdbdb;
-    background: #dbdbdb;
-}
+/*.search form {*/
+/*    border: 1px solid #dbdbdb;*/
+/*    background: #dbdbdb;*/
+/*}*/
 
-.search form input[type="text"] {
-    padding: 5px 6px;
-    font-weight: 400;
-    font-size: 1em;
-    color: #fff;
-    border: none;
-    outline: none;
-    font-family: 'Roboto Condensed', sans-serif;
-    width: 87%;
-    background: #dbdbdb;
-}
+/*.search form input[type="text"] {*/
+/*    padding: 5px 6px;*/
+/*    font-weight: 400;*/
+/*    font-size: 1em;*/
+/*    color: #fff;*/
+/*    border: none;*/
+/*    outline: none;*/
+/*    font-family: 'Roboto Condensed', sans-serif;*/
+/*    width: 87%;*/
+/*    background: #dbdbdb;*/
+/*}*/
 
-.search form input[type="submit"] {
-    background: url('../images/search.png') no-repeat 0px 0px;
-    width: 20px;
-    height: 20px;
-    border: none;
-    cursor: pointer;
-    outline: none;
-    position: absolute;
-    top: 23%;
-}
+/*.search form input[type="submit"] {*/
+/*    background: url('../images/search.png') no-repeat 0px 0px;*/
+/*    width: 20px;*/
+/*    height: 20px;*/
+/*    border: none;*/
+/*    cursor: pointer;*/
+/*    outline: none;*/
+/*    position: absolute;*/
+/*    top: 23%;*/
+/*}*/
 
 .top-menu ul {
     margin-top: 1em;
@@ -189,7 +189,7 @@ ul, label {
     margin-bottom: 1em;
 }
 
-.post-info h4 a {
+.post-info h4 a, .tipue_search_content_title a {
     font-size: 1.7em;
     color: #333;
     margin-right: 0.7em;
@@ -200,11 +200,11 @@ ul, label {
     text-transform: uppercase;
 }
 
-.post-info h4 a:hover {
-    color: #4a5054;
+.post-info h4 a:hover, .tipue_search_content_title a:hover {
+    color: #f74c3c;
 }
 
-.post-info p {
+.post-info p, #tipue_search_content {
     font-family: 'Roboto', sans-serif;
     color: #9a9da0;
     font-size: 0.9em;
@@ -269,7 +269,7 @@ ul, label {
 }
 
 .single-grid header h4 a:hover {
-    color: #4a5054;
+    color: #f74c3c;
 }
 
 .single-grid header p {
@@ -353,7 +353,7 @@ ul, label {
 }
 
 .recent h3, .side-links h3, .archives h3, .categories h3 {
-    color: #4a5054;
+    color: #f74c3c;
     font-size: 1.1em;
     margin-bottom: 0.5em;
 }
@@ -423,7 +423,7 @@ ul, label {
 }
 
 .about-grid h3, .about-grid2 h3, .who-iam h3 {
-    color: #4a5054;
+    color: #f74c3c;
     font-size: 1.3em;
     margin-bottom: 0.5em;
 }
@@ -466,7 +466,7 @@ ul, label {
 }
 
 .man-info h4 {
-    color: #4a5054;
+    color: #f74c3c;
     margin-left: 1em;
     font-size: 1.1em;
     margin-bottom: 0.5em;
@@ -541,7 +541,7 @@ ul, label {
 }
 
 .contact-map h4, .company_address h4 {
-    color: #4a5054;
+    color: #f74c3c;
     font-size: 1.3em;
     font-weight: 400;
     margin-bottom: 1em;
