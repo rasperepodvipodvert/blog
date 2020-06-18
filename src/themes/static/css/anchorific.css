@@ -15,12 +15,12 @@
     }
 }
 
-/*.anchorific li ul {*/
-/*    display: none;*/
-/*}*/
+.anchorific li ul {
+   display: none;
+}
 
 .anchorific li.active > a {
-    color: #00aeff;
+    color: #f74c3c;
 }
 
 .anchorific li.active > ul {

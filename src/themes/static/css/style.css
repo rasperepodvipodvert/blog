@@ -31,6 +31,10 @@ p {
     margin: 0;
 }
 
+a:hover {
+    color: #f74c3c;
+}
+
 ul, label {
     margin: 0;
     padding: 0;
@@ -187,7 +191,7 @@ ul, label {
     color: #afafaf;
     font-family: 'Roboto', sans-serif;
     font-size: 0.8em;
-    margin-bottom: 1em;
+    margin-bottom: -1em;
 }
 
 .post-info h4 a, .tipue_search_content_title a {
@@ -255,7 +259,7 @@ ul, label {
     color: #afafaf;
     font-family: 'Roboto', sans-serif;
     font-size: 0.8em;
-    margin-bottom: 1em;
+    margin-bottom: -1em;
 }
 
 .single-grid header h4 a {
@@ -297,7 +301,7 @@ ul, label {
 .single-grid header a {
     color: #626465;
     font-weight: 400;
-    font-size: 1em;
+    font-size: 1.3em;
     display: inline-block;
     text-decoration: none;
 }
@@ -378,7 +382,7 @@ ul, label {
     color: #7C7C7C;
     font-size: 0.9em;
     border-bottom: none;
-    margin: 0 5px;
+    margin: 0 0px;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -392,8 +396,11 @@ ul, label {
 }
 
 .footer.art-info {
-    padding: 0em 1.5em 0em 1.5em;
+    padding: 0em 0em 0em 0em;
     margin-bottom: 15px;
+    color: #afafaf;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8em;
 }
 
 .footer p {
@@ -740,6 +747,7 @@ ul.comment-list img {
     height: 10em;
     background-size: contain;
 }
+
 
     .logo {
         height: 135px;

@@ -38,7 +38,8 @@ AUTHOR_FEED_RSS = None
 
 MENUITEMS = (
     ('home', '/'),
-    ('best', '/tag/best/')
+    ('best', '/tag/best/'),
+    ('arhive', '/archives')
 )
 HIDE_CATEGORIES_FROM_MENU = True
 
@@ -77,6 +78,8 @@ SITEMAP = {
 
 DISPLAY_BREADCRUMBS = True
 DISPLAY_CATEGORY_IN_BREADCRUMBS = True
+SHARETHIS_PUB_KEY = False               # disable share this pub
+SOCIAL_LIKES = False                    # disable social like buttons
 
 # отображение тегов
 DISPLAY_TAGS_ON_SIDEBAR = True
@@ -119,10 +122,7 @@ CURRENT_YEAR = datetime.date.today().year
 # markdown settings
 from markdown.extensions.toc import TocExtension
 from slugify import slugify
-# MARKDOWN = {
-#     'codehilite(css_class=highlight)', 'extra',
-#     TocExtension(anchorlink=True, slugify=slugify),
-# }
+
 MARKDOWN = {
 'extension_configs': {
 'markdown.extensions.codehilite': {'css_class': 'highlight'},
