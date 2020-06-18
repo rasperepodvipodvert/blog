@@ -125,7 +125,11 @@ from slugify import slugify
 
 MARKDOWN = {
 'extension_configs': {
-'markdown.extensions.codehilite': {'css_class': 'highlight'},
+'markdown.extensions.codehilite': {
+    'css_class': 'highlight',
+    'linenums': False,
+    'use_pygments': True
+    },
 'markdown.extensions.extra': {},
 'markdown.extensions.meta': {},
 'markdown.extensions.toc': {

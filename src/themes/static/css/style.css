@@ -49,6 +49,11 @@ ul, label {
     background-size: contain;
 }
 
+.linenodiv pre, .highlight pre{
+    margin: 0;
+    color: #fff;
+}
+
 .logo {
     display: none;
     height: 169px;
@@ -86,7 +91,7 @@ ul, label {
 }
 
 .tag, code {
-    padding: 2px 6px;
+    padding: 0px 4px;
     font-size: 90%;
     background-color: #eee;
     color: #000;
@@ -233,7 +238,7 @@ ul, label {
 .post-info a {
     color: #626465;
     font-weight: 400;
-    font-size: 1em;
+    font-size: 1.3em;
     display: inline-block;
     text-decoration: none;
 }
@@ -243,16 +248,17 @@ ul, label {
 }
 
 .single-grid p a, .single-grid li a {
-    color: #626465;
+    color: #f74c3c;
     font-weight: 400;
     font-size: 1em;
     display: inline-block;
-    text-decoration: none;
-    border-bottom: 1px solid #a6aaae;
+    text-decoration: none !important;
+    /* border-bottom: 0px solid #a6aaae; */
 }
 
+
 .single-grid p a:hover, .single-grid li a:hover {
-    color: #f74c3c;
+    color: #989898;
 }
 
 .single-grid header h4 {
