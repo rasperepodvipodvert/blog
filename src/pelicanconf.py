@@ -5,8 +5,9 @@ import datetime
 
 AUTHOR = 'ifilatov'
 SITENAME = 'blog.filatovz.ru'
-SITEURL = 'https://rasperepodvipodvert.github.io/pub_blog/'
+SITEURL = 'https://blog.filatovz.ru/'
 USE_FOLDER_AS_CATEGORY = True
+DESCRIPTION = "Мой блог на всякий случай"
 
 PATH = 'content'
 
@@ -30,7 +31,8 @@ SOCIALLINKS_TEXT = u'Социал'
 
 # Feed generation is usually not desired when developing
 
-FEED_ALL_ATOM = None
+FEED_ALL_ATOM = 'feeds/all.atom.xml'
+FEED_ALL_RSS = 'feeds/all.rss.xml'
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
@@ -60,7 +62,7 @@ DEFAULT_PAGINATION = 10
 
 PLUGIN_PATHS = ['plugins']
 PLUGINS = ['sitemap', 'neighbors', 'related_posts', 'assets', 'tipue_search']
-DIRECT_TEMPLATES = ['index', 'tags', 'categories', 'authors', 'archives', 'search']
+DIRECT_TEMPLATES = ['index', 'tags', 'categories', 'authors', 'archives', 'search', 'turbo']
 
 SITEMAP = {
     'format': 'xml',
@@ -74,6 +76,10 @@ SITEMAP = {
         'indexes': 'daily',
         'pages': 'monthly'
     }
+}
+
+TURBO = {
+    'format': 'xml'
 }
 
 DISPLAY_BREADCRUMBS = True

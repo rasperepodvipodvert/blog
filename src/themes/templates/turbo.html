@@ -1,0 +1,35 @@
+<rss xmlns:yandex="http://news.yandex.ru" xmlns:media="http://search.yahoo.com/mrss/" xmlns:turbo="http://turbo.yandex.ru" version="2.0">
+    <channel>
+        <!-- Информация о сайте-источнике -->
+        <title>{{ SITENAME }}</title>
+        <link>{{ SITEURL }}</link>
+        <description>{{ DESCRIPTION }}</description>
+        <language>ru</language>
+        <turbo:analytics type="Yandex" id="{{ YA_METRIKA }}"></turbo:analytics>
+        <turbo:adNetwork></turbo:adNetwork>
+        <item turbo="true">
+            {% for article in articles %}
+            <!-- Информация о странице -->
+            <link>{{ article.url }}</link>
+            <turbo:source></turbo:source>
+            <turbo:topic></turbo:topic>
+            <pubDate>{{ article.date }}</pubDate>
+            <author>{{ AUTHOR }}</author>
+            <metrics>
+                <yandex schema_identifier="{{ YA_METRIKA }}">
+                    <breadcrumblist>
+                        <breadcrumb url="{{ SITEURL }}" text="Домашняя"/>
+                    </breadcrumblist>
+                </yandex>
+            </metrics>
+            <yandex:related></yandex:related>
+            <turbo:content>
+                <![CDATA[
+                    {{ article.summary }}
+                ]]>
+            </turbo:content>
+        </item>
+        {% endfor %}
+    </channel>
+</rss>
+

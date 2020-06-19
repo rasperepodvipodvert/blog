@@ -4,3 +4,4 @@ markdown~=3.2.2
 beautifulsoup4
 ghp-import
 slugify
+requests
