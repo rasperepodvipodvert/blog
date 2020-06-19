@@ -142,3 +142,5 @@ MARKDOWN = {
 },
 'output_format': 'html5',
 }
+
+YA_METRIKA = '64995766'
