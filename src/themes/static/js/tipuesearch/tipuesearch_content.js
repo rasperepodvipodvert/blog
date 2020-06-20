@@ -15,3 +15,4 @@ var tipuesearch = {"pages": [
      {"title": "A Very Simple CSS Background Zoom", "text": "A really easy method of creating a CSS background image zoom. Not only is this simple, it comes with wide browser support.", "tags": "Tipue Blog", "note": "<a href='http://www.tipue.com/blog/'>More articles</a>", "url": "http://www.tipue.com/blog/css-background-zoom"},
      {"title": "Using Z-index", "text": "The CSS z-index property often trips up both new and experienced developers. The aim of this article is to boil down a somewhat-complex specification to three major points, which should ease most z-index pain.", "tags": "Tipue Blog", "note": "<a href='http://www.tipue.com/blog/'>More articles</a>", "url": "http://www.tipue.com/blog/z-index"}
 ]};
+

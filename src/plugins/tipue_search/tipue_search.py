@@ -109,3 +109,4 @@ def get_generators(generators):
 
 def register():
     signals.get_generators.connect(get_generators)
+
