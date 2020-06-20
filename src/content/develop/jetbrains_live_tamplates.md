@@ -3,7 +3,7 @@ Date: 2020-06-16 10:40
 Author: ifilatov
 Tags: idea, howto, best
 Slug: jetbrains_live_tamplates
-Image: media/idea.jpg
+Image: /media/idea.jpg
 Status: published
 Summary: Я добавил такой шаблон, т.к. часто пишу документацию в `markdown` и мне необходимо вставлять строки подобного рода:
 

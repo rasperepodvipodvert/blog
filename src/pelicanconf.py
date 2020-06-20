@@ -5,7 +5,8 @@ import datetime
 
 AUTHOR = 'ifilatov'
 SITENAME = 'blog.filatovz.ru'
-SITEURL = 'https://blog.filatovz.ru/'
+SITEURL = "https://blog.filatovz.ru"
+ABSOLUTE_SITEURL = SITEURL
 USE_FOLDER_AS_CATEGORY = True
 DESCRIPTION = "Мой блог на всякий случай"
 
@@ -76,10 +77,6 @@ SITEMAP = {
         'indexes': 'daily',
         'pages': 'monthly'
     }
-}
-
-TURBO = {
-    'format': 'xml'
 }
 
 DISPLAY_BREADCRUMBS = True
