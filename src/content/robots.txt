@@ -3,5 +3,6 @@ Disallow: /content/
 
 User-agent: *
 Disallow: /content/
+Disallow: /*.html$
 Sitemap: https://blog.filatovz.ru/sitemap.xml
 Host: blog.filatovz.ru

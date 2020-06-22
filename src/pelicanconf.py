@@ -62,8 +62,10 @@ DEFAULT_PAGINATION = 10
 # RELATIVE_URLS = True
 
 PLUGIN_PATHS = ['plugins']
-PLUGINS = ['sitemap', 'neighbors', 'related_posts', 'assets', 'tipue_search']
+PLUGINS = ['sitemap', 'neighbors', 'related_posts', 'assets', 'tipue_search', 'optimize_images']
 DIRECT_TEMPLATES = ['index', 'tags', 'categories', 'authors', 'archives', 'search', 'turbo']
+
+YUICOMPRESSOR_EXECUTABLE = 'yuicompressor'
 
 SITEMAP = {
     'format': 'xml',

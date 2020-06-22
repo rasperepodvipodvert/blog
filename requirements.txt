@@ -5,3 +5,5 @@ beautifulsoup4
 ghp-import
 slugify
 requests
+yuicompressor
+pillow
