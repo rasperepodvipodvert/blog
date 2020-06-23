@@ -3,6 +3,7 @@ site_name: СИСADМИН.blog
 site_description: Собираю стеки (docker, swarm, docker-compose). Пишу автоматизации
 site_author: ifilatov
 site_url: https://blog.filatovz.ru
+analytics: '64995766'
 
 theme:
   name: null

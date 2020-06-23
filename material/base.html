@@ -71,7 +71,7 @@
       <link rel="stylesheet" href="{{ path | url }}">
     {% endfor %}
     {% block analytics %}
-      {% if config.google_analytics %}
+      {% if config.data.analytics %}
         {% include "partials/integrations/analytics.html" %}
       {% endif %}
     {% endblock %}
