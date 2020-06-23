@@ -1,0 +1,11 @@
+.md-logo{
+    padding: 0 !important;
+}
+.md-logo img{
+height: 4em !important;
+width: 4em !important;
+    margin-top: 9px;
+}
+md-header-nav__title{
+    padding: 0;
+}
