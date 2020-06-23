@@ -13,8 +13,7 @@ venv
 /build
 /MANIFEST
 /manifest.json
-/site
-site
+
 
 # Distribution files
 /dist
