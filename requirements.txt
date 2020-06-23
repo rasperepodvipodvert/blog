@@ -1,9 +1,0 @@
-pelican~=4.2.0
-pytz~=2020.1
-markdown~=3.2.2
-beautifulsoup4
-ghp-import
-slugify
-requests
-yuicompressor
-pillow
