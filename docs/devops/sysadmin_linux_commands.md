@@ -9,6 +9,7 @@ Summary: Разные полезные команды для linux админо�
 ## Ссылки по теме
 
 - [Полезные команды на одном листе](https://www.f-notes.info/linux:linux_command)
+- [[Шпаргалка] Разведка и аудит сервера](https://codeby.net/threads/shpargalka-razvedka-i-audit-servera.63524/)
 
 ## Работа с текстом
 
@@ -18,6 +19,22 @@ Summary: Разные полезные команды для linux админо�
 grep 'Connection closed' /var/log/secure |cut -d ' ' -f 9|sort|uniq -c|sort -n
 ```
 
+## Рецепты
+
+??? summary "Проверка водящих подключений к системе."
+
+    ```sh
+    lsof -i
+    lsof -i :80
+    grep 80 /etc/services
+    netstat -antup
+    netstat -antpx
+    netstat -tulpn
+    chkconfig --list
+    chkconfig --list | grep 3:on
+    last
+    w
+    ```
 ## Docker
 
 ### Portainer
