@@ -69,9 +69,10 @@ Summary: Здесь собран софт, необходимый для нап�
 
     !!! info "В данном примере используются два репозитория `origin`, `gh-pages` и branch `gh-pages` для публичного репозитория"
 
-    ```
+    ``cmd
     set OUTPUTDIR=site
     set GITHUB_PAGES_REMOTE=gh-pages
     set GITHUB_PAGES_BRANCH=gh-pages
     mkdocs gh-deploy -m "Generate MkDocs site" -r %GITHUB_PAGES_REMOTE% -b %GITHUB_PAGES_BRANCH% -d %OUTPUTDIR% --force
-    ```
+    rd site /S /Q
+    ``

@@ -56,3 +56,10 @@ Summary: Здесь лежат всякие ништяки по 1С Битрик
     find /var/www/test.com/public_html -type d -exec chmod 0770 {} \;
     find /var/www/test.com/public_html -type f -exec chmod 0660 {} \;
     ```
+
+## Синхронизация DEV -> PRODUCT
+
+Самый простой способ синхронизации 1С Bitrix управление сайтом с сервером для разработки (deploy) - через резервную копию в облако #bitrix
+
+!!! info
+    Данный способ хорош только в том случае, если вы все еще живете без #git

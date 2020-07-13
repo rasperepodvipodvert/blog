@@ -17,6 +17,13 @@ python Automater.py -h
 
 ## [machinae](https://github.com/HurricaneLabs/machinae)
 
-```sh
+### Ссылки
 
+- [Руководство по Machinae](https://kali.tools/?p=1250)
+- https://github.com/HurricaneLabs/machinae
+
+### Установка
+
+```sh
+pip3 install git+https://github.com/HurricaneLabs/machinae.git
 ```
