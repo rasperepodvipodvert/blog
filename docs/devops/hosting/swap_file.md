@@ -38,6 +38,9 @@ echo 'vm.vfs_cache_pressure=50' | tee -a /etc/sysctl.d/swap.conf
 
 
 # Устанавливаем zram - систему сжатия памяти
+# Debian 9 - добавляем в /etc/apt/sources.list
+# deb  http://deb.debian.org/debian stretch main contrib non-free
+# deb-src  http://deb.debian.org/debian stretch main contrib non-free
 apt install linux-image-extra-virtual zram-config
 
 ```
