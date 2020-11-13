@@ -15,3 +15,7 @@ Summary: Просматриваем сообщения электронной п
 2. Скачиваем и разархивируем архив
 3. Запускаем программу [mbox-viewer](https://github.com/eneam/mboxviewer/releases) и в ней указываем каталог, куда разархивировали архив от гугла
 
+## Ограничения
+
+- [Gmail IMAP](https://support.google.com/a/answer/1071518?hl=ru)
+- [Thunderbird](https://www.reg.ru/support/pochta_general/pochta-reg-ru/problemy-s-otpravkoy-pochty/ogranichenie-imap-soedineny)
