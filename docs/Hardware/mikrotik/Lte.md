@@ -6,6 +6,15 @@ Slug: lte_lock
 Status: published
 Summary: Инструкция, как привязать R11e-LTE к сектору базовой станции
 
+## Ссылки
+ - [Полезные испытания Mikrotik LTE KIT](https://asp24.com.ua/blog/polevye-ispytaniya-mikrotik-sxt-lte-kit/?utm_source=rss&utm_medium=rss&utm_campaign=polevye-ispytaniya-mikrotik-sxt-lte-kit)
+
+## Настройки
+
+!!! attention "При настройке статического IP через SXT LTE нужно учесть"
+    - при настройке режиме Passthroungh нужно вырубать DHCP-Server на интерфейсе, который указан в настройках этого режима
+    - необходимо указывать статический IP на нижнем роутере, куда вы пробрасываете LTE
+
 '/interface lte at-chat lte1 input="AT*Cell=2,3,,1550,459"'
 
 ```
