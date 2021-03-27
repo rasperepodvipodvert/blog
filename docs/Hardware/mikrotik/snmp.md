@@ -11,4 +11,4 @@ snmp set enabled=yes location=TS trap-community=ts_123456 trap-version=2
 
 1. Установить [шаблон](https://www.zabbix.com/ru/integrations/mikrotik)
 
-!!! note подходит и для zabbix 5.0
+!!! note "подходит и для zabbix 5.0"
