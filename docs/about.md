@@ -1,6 +1,9 @@
-title: About
+# Мои знания
 
-## Мои знания
+## DEVOPS
+- GitLab CI
+- GitHub Actions
+
 
 ### Программирование
 
@@ -8,14 +11,14 @@ title: About
 - Знаю API FB
 - Знаю API DialogFlow
 - Знаю API Bitrix24
-
-## Использую технологии
-
 - Python
-- VueJS
 - Django
-- Flask
+
+### Администрирование
+
+- Linux/Windows более 15 лет
 
 ## Любимые методологии
 
-- GTD
+- [GTD](https://ru.wikipedia.org/wiki/Getting_Things_Done)
+- [SCRUM](https://ru.wikipedia.org/wiki/SCRUM)

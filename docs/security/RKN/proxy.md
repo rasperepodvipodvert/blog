@@ -9,9 +9,13 @@
 ## Mikrotik Client - OpenVPN Server
 
 После использования скрипта авто-установки, чтобы OpenVPN Client в RouterOS сработал, нужно в файле /etc/openvpn/server/server.conf выставить:
-
+Ubuntu2104
 ```
 proto tcp
 auth SHA1
 #tls-auth
+```
+
+```shell
+
 ```

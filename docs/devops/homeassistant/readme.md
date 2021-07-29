@@ -49,3 +49,23 @@ Restart=on-failure
 [Install]
 WantedBy=multi-user.target
 ```
+
+## Обновление python
+
+```shell
+# качаем свежий python
+wget https://www.python.org/ftp/python/3.9.5/Python-3.9.5.tgz
+tar -zxf Python-3.9.5.tgz
+cd Python-3.9.5/
+# подготавливаем сборку
+./configure --enable-optimizations
+make -j 2 # собираем на 2-х ядрах
+make altinstall # устанавливаем рядом с другими пайтонами
+# добавляем альтернативу питона
+update-alternatives --install /usr/bin/python3.9 python3 /usr/local/bin/python3.9 3
+update-alternatives --config python3 # выбираем установленную альтернативу как основную
+# переходим в директорию куда клонировали hass
+cd /root/core
+git pull # получаем обновления
+python3.9 -m pip install -r requirements_all.txt # ставим новые пакеты в новый python3
+```
