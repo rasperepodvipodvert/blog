@@ -324,8 +324,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../about/" title="About" class="md-nav__link">
-      About
+    <a href="../../../about/" title="Мои знания" class="md-nav__link">
+      Мои знания
     </a>
   </li>
 
@@ -1089,6 +1089,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    Обновление python
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1828,6 +1835,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    Обновление python
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1887,6 +1901,23 @@ pip3 install homeassistant
 
 <span class="k">[Install]</span>
 <span class="na">WantedBy</span><span class="o">=</span><span class="s">multi-user.target</span>
+</code></pre></div>
+<h2 id="python">Обновление python<a class="headerlink" href="#python" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># качаем свежий python</span>
+wget https://www.python.org/ftp/python/3.9.5/Python-3.9.5.tgz
+tar -zxf Python-3.9.5.tgz
+<span class="nb">cd</span> Python-3.9.5/
+<span class="c1"># подготавливаем сборку</span>
+./configure --enable-optimizations
+make -j <span class="m">2</span> <span class="c1"># собираем на 2-х ядрах</span>
+make altinstall <span class="c1"># устанавливаем рядом с другими пайтонами</span>
+<span class="c1"># добавляем альтернативу питона</span>
+update-alternatives --install /usr/bin/python3.9 python3 /usr/local/bin/python3.9 <span class="m">3</span>
+update-alternatives --config python3 <span class="c1"># выбираем установленную альтернативу как основную</span>
+<span class="c1"># переходим в директорию куда клонировали hass</span>
+<span class="nb">cd</span> /root/core
+git pull <span class="c1"># получаем обновления</span>
+python3.9 -m pip install -r requirements_all.txt <span class="c1"># ставим новые пакеты в новый python3</span>
 </code></pre></div>
                 
                   
