@@ -1,6 +1,6 @@
 # Мои знания
 
-### DEVOPS ()
+### DEVOPS (Администрирование)
 
 - GitLab CI
 - GitHub Actions
