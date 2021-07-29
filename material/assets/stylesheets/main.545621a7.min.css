@@ -2474,7 +2474,8 @@ html .md-nav__link[for=__toc] ~ .md-nav {
     display: inline-block;
     height: 2.4rem;
     padding-right: .6rem;
-    padding-left: .6rem
+    padding-left: .6rem;
+    text-transform: uppercase;
 }
 
 .md-tabs__link {
