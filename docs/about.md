@@ -1,8 +1,10 @@
 # Мои знания
 
-## DEVOPS
+### DEVOPS ()
+
 - GitLab CI
 - GitHub Actions
+- Linux/Windows более 15 лет
 
 
 ### Программирование
@@ -13,10 +15,6 @@
 - Знаю API Bitrix24
 - Python
 - Django
-
-### Администрирование
-
-- Linux/Windows более 15 лет
 
 ## Любимые методологии
 
