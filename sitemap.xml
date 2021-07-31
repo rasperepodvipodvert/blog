@@ -2,207 +2,207 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://blog.filatovz.ru/</loc>
-         <lastmod>2021-07-29</lastmod>
+         <lastmod>2021-07-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://blog.filatovz.ru/about/</loc>
-         <lastmod>2021-07-29</lastmod>
+         <lastmod>2021-07-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://blog.filatovz.ru/Hardware/Raspberry_PI/rpi3_android_tv/</loc>
-         <lastmod>2021-07-29</lastmod>
+         <lastmod>2021-07-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://blog.filatovz.ru/Hardware/electrolizer/readme/</loc>
-         <lastmod>2021-07-29</lastmod>
+         <lastmod>2021-07-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://blog.filatovz.ru/Hardware/macbook/install_windows/</loc>
-         <lastmod>2021-07-29</lastmod>
+         <lastmod>2021-07-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://blog.filatovz.ru/Hardware/mikrotik/Lte/</loc>
-         <lastmod>2021-07-29</lastmod>
+         <lastmod>2021-07-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://blog.filatovz.ru/Hardware/mikrotik/adguard_dns/</loc>
-         <lastmod>2021-07-29</lastmod>
+         <lastmod>2021-07-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://blog.filatovz.ru/Hardware/mikrotik/many_isp/</loc>
-         <lastmod>2021-07-29</lastmod>
+         <lastmod>2021-07-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://blog.filatovz.ru/Hardware/mikrotik/snmp/</loc>
-         <lastmod>2021-07-29</lastmod>
+         <lastmod>2021-07-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://blog.filatovz.ru/Hardware/usb_modem/e3372/</loc>
-         <lastmod>2021-07-29</lastmod>
+         <lastmod>2021-07-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://blog.filatovz.ru/blog/2020/06/23/windows_net_time/</loc>
-         <lastmod>2021-07-29</lastmod>
+         <lastmod>2021-07-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://blog.filatovz.ru/blog/2020/06/23/%D0%A1%D0%BB%D0%B5%D0%B7%D0%B0%D0%B5%D0%BC%20%D1%81%20%D0%BF%D0%B5%D0%BB%D0%B8%D0%BA%D0%B0%D0%BD%D0%B0/</loc>
-         <lastmod>2021-07-29</lastmod>
+         <lastmod>2021-07-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://blog.filatovz.ru/develop/bitrix_to_idea_tasks/</loc>
-         <lastmod>2021-07-29</lastmod>
+         <lastmod>2021-07-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://blog.filatovz.ru/develop/bitrix/bitrix_recepts/</loc>
-         <lastmod>2021-07-29</lastmod>
+         <lastmod>2021-07-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://blog.filatovz.ru/develop/bitrix/bitrix_sendmail/</loc>
-         <lastmod>2021-07-29</lastmod>
+         <lastmod>2021-07-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://blog.filatovz.ru/develop/bitrix/service_temporarily_unavailable/</loc>
-         <lastmod>2021-07-29</lastmod>
+         <lastmod>2021-07-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://blog.filatovz.ru/develop/python/python2_on_ubuntu2020/</loc>
-         <lastmod>2021-07-29</lastmod>
+         <lastmod>2021-07-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://blog.filatovz.ru/develop/python/python3_on_debian10/</loc>
-         <lastmod>2021-07-29</lastmod>
+         <lastmod>2021-07-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://blog.filatovz.ru/devops/Proxmox/%D1%80%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D0%BE%D1%80%D0%B8%D0%B9/</loc>
-         <lastmod>2021-07-29</lastmod>
+         <lastmod>2021-07-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://blog.filatovz.ru/devops/ansible/mysql/</loc>
-         <lastmod>2021-07-29</lastmod>
+         <lastmod>2021-07-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://blog.filatovz.ru/devops/docker/nginx_docker_fail2ban/</loc>
-         <lastmod>2021-07-29</lastmod>
+         <lastmod>2021-07-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://blog.filatovz.ru/devops/fail2ban/install_configure/</loc>
-         <lastmod>2021-07-29</lastmod>
+         <lastmod>2021-07-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://blog.filatovz.ru/devops/heroku/deploy_python_project/</loc>
-         <lastmod>2021-07-29</lastmod>
+         <lastmod>2021-07-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://blog.filatovz.ru/devops/homeassistant/readme/</loc>
-         <lastmod>2021-07-29</lastmod>
+         <lastmod>2021-07-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://blog.filatovz.ru/devops/hosting/swap_file/</loc>
-         <lastmod>2021-07-29</lastmod>
+         <lastmod>2021-07-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://blog.filatovz.ru/devops/linux/lemp/</loc>
-         <lastmod>2021-07-29</lastmod>
+         <lastmod>2021-07-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://blog.filatovz.ru/devops/linux/sysadmin_linux_commands/</loc>
-         <lastmod>2021-07-29</lastmod>
+         <lastmod>2021-07-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://blog.filatovz.ru/devops/mysql/mysql_commands/</loc>
-         <lastmod>2021-07-29</lastmod>
+         <lastmod>2021-07-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://blog.filatovz.ru/devops/mysql/pass_insecure/</loc>
-         <lastmod>2021-07-29</lastmod>
+         <lastmod>2021-07-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://blog.filatovz.ru/devops/nginx/ssl/</loc>
-         <lastmod>2021-07-29</lastmod>
+         <lastmod>2021-07-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://blog.filatovz.ru/devops/windows/activate/</loc>
-         <lastmod>2021-07-29</lastmod>
+         <lastmod>2021-07-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://blog.filatovz.ru/devops/windows/hdd_space/</loc>
-         <lastmod>2021-07-29</lastmod>
+         <lastmod>2021-07-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://blog.filatovz.ru/devops/zabbix/agent2/</loc>
-         <lastmod>2021-07-29</lastmod>
+         <lastmod>2021-07-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://blog.filatovz.ru/devops/zabbix/nginx/</loc>
-         <lastmod>2021-07-29</lastmod>
+         <lastmod>2021-07-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://blog.filatovz.ru/security/RKN/proxy/</loc>
-         <lastmod>2021-07-29</lastmod>
+         <lastmod>2021-07-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://blog.filatovz.ru/security/web/fuzzer/</loc>
-         <lastmod>2021-07-29</lastmod>
+         <lastmod>2021-07-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://blog.filatovz.ru/security/web/sites_from_ip/</loc>
-         <lastmod>2021-07-29</lastmod>
+         <lastmod>2021-07-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://blog.filatovz.ru/soft/%D0%BA%D1%80%D0%B8%D0%BF%D1%82%D0%BE-%D0%BF%D1%80%D0%BE/</loc>
-         <lastmod>2021-07-29</lastmod>
+         <lastmod>2021-07-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://blog.filatovz.ru/soft/jetbrains/jetbrains_live_tamplates/</loc>
-         <lastmod>2021-07-29</lastmod>
+         <lastmod>2021-07-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://blog.filatovz.ru/soft/mkdocs/soft_for_documentation/</loc>
-         <lastmod>2021-07-29</lastmod>
+         <lastmod>2021-07-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://blog.filatovz.ru/soft/tools/mbox_viewer/</loc>
-         <lastmod>2021-07-29</lastmod>
+         <lastmod>2021-07-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

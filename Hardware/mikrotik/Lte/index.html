@@ -552,6 +552,26 @@
     Настройки
   </a>
   
+    <nav class="md-nav" aria-label="Настройки">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    Команда привязки модема
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    Что есть что
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1776,6 +1796,26 @@
     Настройки
   </a>
   
+    <nav class="md-nav" aria-label="Настройки">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    Команда привязки модема
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    Что есть что
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1798,17 +1838,24 @@
                 
                 <h2 id="_1">Ссылки<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <ul>
+<li><a href="https://wiki.mikrotik.com/wiki/Manual:Interface/LTE#Using_Cell_lock">Официальная документация по LTE CELL LOCK</a></li>
 <li><a href="https://asp24.com.ua/blog/polevye-ispytaniya-mikrotik-sxt-lte-kit/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=polevye-ispytaniya-mikrotik-sxt-lte-kit">Полезные испытания Mikrotik LTE KIT</a></li>
+<li><a href="https://www.cellmapper.net/map">Карта базовых станций</a></li>
 </ul>
 <h2 id="_2">Настройки<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<div class="admonition attention">
+<div class="admonition info">
 <p class="admonition-title">При настройке статического IP через SXT LTE нужно учесть</p>
 <ul>
 <li>при настройке режиме Passthroungh нужно вырубать DHCP-Server на интерфейсе, который указан в настройках этого режима</li>
 <li>необходимо указывать статический IP на нижнем роутере, куда вы пробрасываете LTE</li>
 </ul>
 </div>
+<div class="admonition attention">
+<p class="admonition-title">Привязка возможна только к той станции, к которой уже подключался модем</p>
+</div>
+<h3 id="_3">Команда привязки модема<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>'/interface lte at-chat lte1 input="AT*Cell=2,3,,1550,459"'</p>
+<h3 id="_4">Что есть что<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>AT*Cell=&lt;mode&gt;,&lt;NetworkMode&gt;,&lt;band&gt;,&lt;EARFCN&gt;,&lt;PCI&gt;
 
 &lt;mode&gt; :
