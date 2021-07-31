@@ -86,7 +86,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#doh-dns-over-https" class="md-skip">
           Перейти к содержанию
         </a>
       
@@ -551,6 +551,13 @@
       Содержание
     </label>
     <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#doh-dns-over-https" class="md-nav__link">
+    DoH (DNS OVER HTTPS)
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
@@ -1765,6 +1772,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#doh-dns-over-https" class="md-nav__link">
+    DoH (DNS OVER HTTPS)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     Стандартный режим
   </a>
@@ -1796,7 +1810,22 @@
                 
                   <h1>Настраиваем свой микротик на блокировку рекламы</h1>
                 
-                <h2 id="_1">Стандартный режим<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+                <h2 id="doh-dns-over-https">DoH (DNS OVER HTTPS)<a class="headerlink" href="#doh-dns-over-https" title="Permanent link">&para;</a></h2>
+<p>Чтобы настроить использование DoH нужно ввести следующие команды в консоле микротика:</p>
+<div class="highlight"><pre><span></span><code># Установка NS CloudFlare для следующих действий
+./ip dns set servers=1.1.1.1,1.0.0.1
+# Синхронизируем время с time.cloudflare.com
+./system ntp client set enabled=yes server-dns-names=time.cloudflare.com
+# Качаем сертификат которым рым мы будем валидировать ответы от DNS
+./tool fetch url=https://curl.haxx.se/ca/cacert.pem
+# Импортируем его в систему
+./certificate import file-name=cacert.pem passphrase=&quot;&quot;
+# Применяем DoH
+./ip dns set use-doh-server=https://1.1.1.1/dns-query verify-doh-cert=yes
+# Стираем нафиг обычные NS
+./ip dns set servers=&quot;&quot;
+</code></pre></div>
+<h2 id="_1">Стандартный режим<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p><a href="https://adguard.com/ru/adguard-dns/overview.html">AdGuard DNS</a> – это альтернативный способ заблокировать рекламу, защитить личные данные и оградить детей от взрослых материалов. Он прост в настройке и использовании и обеспечивает необходимый минимум защиты от рекламы, трекинга и фишинга, независимо от платформы.</p>
 </blockquote>
