@@ -7,15 +7,23 @@ Status: published
 Summary: Инструкция, как привязать R11e-LTE к сектору базовой станции
 
 ## Ссылки
- - [Полезные испытания Mikrotik LTE KIT](https://asp24.com.ua/blog/polevye-ispytaniya-mikrotik-sxt-lte-kit/?utm_source=rss&utm_medium=rss&utm_campaign=polevye-ispytaniya-mikrotik-sxt-lte-kit)
+- [Официальная документация по LTE CELL LOCK](https://wiki.mikrotik.com/wiki/Manual:Interface/LTE#Using_Cell_lock)
+- [Полезные испытания Mikrotik LTE KIT](https://asp24.com.ua/blog/polevye-ispytaniya-mikrotik-sxt-lte-kit/?utm_source=rss&utm_medium=rss&utm_campaign=polevye-ispytaniya-mikrotik-sxt-lte-kit)
+- [Карта базовых станций](https://www.cellmapper.net/map)
 
 ## Настройки
 
-!!! attention "При настройке статического IP через SXT LTE нужно учесть"
+!!! info "При настройке статического IP через SXT LTE нужно учесть"
     - при настройке режиме Passthroungh нужно вырубать DHCP-Server на интерфейсе, который указан в настройках этого режима
     - необходимо указывать статический IP на нижнем роутере, куда вы пробрасываете LTE
+    
+!!! attention "Привязка возможна только к той станции, к которой уже подключался модем"
+
+### Команда привязки модема
 
 '/interface lte at-chat lte1 input="AT*Cell=2,3,,1550,459"'
+
+### Что есть что
 
 ```
 AT*Cell=<mode>,<NetworkMode>,<band>,<EARFCN>,<PCI>
