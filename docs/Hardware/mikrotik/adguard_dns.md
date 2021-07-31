@@ -7,6 +7,25 @@ Image: /media/adguard_dns.png
 Status: published
 Summary: Инструкция, как настроить mikrotik или любой другой роутер на блокировку рекламы
 
+## DoH (DNS OVER HTTPS)
+
+Чтобы настроить использование DoH нужно ввести следующие команды в консоле микротика:
+
+```
+# Установка NS CloudFlare для следующих действий
+./ip dns set servers=1.1.1.1,1.0.0.1
+# Синхронизируем время с time.cloudflare.com
+./system ntp client set enabled=yes server-dns-names=time.cloudflare.com
+# Качаем сертификат которым рым мы будем валидировать ответы от DNS
+./tool fetch url=https://curl.haxx.se/ca/cacert.pem
+# Импортируем его в систему
+./certificate import file-name=cacert.pem passphrase=""
+# Применяем DoH
+./ip dns set use-doh-server=https://1.1.1.1/dns-query verify-doh-cert=yes
+# Стираем нафиг обычные NS
+./ip dns set servers=""
+```
+
 ## Стандартный режим
 
 > [AdGuard DNS](https://adguard.com/ru/adguard-dns/overview.html) – это альтернативный способ заблокировать рекламу, защитить личные данные и оградить детей от взрослых материалов. Он прост в настройке и использовании и обеспечивает необходимый минимум защиты от рекламы, трекинга и фишинга, независимо от платформы.
