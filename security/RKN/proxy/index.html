@@ -1450,6 +1450,19 @@
     L2TP Server (mikrotik rady)
   </a>
   
+    <nav class="md-nav" aria-label="L2TP Server (mikrotik rady)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mikrotik" class="md-nav__link">
+    Mikrotik
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1789,6 +1802,19 @@
     L2TP Server (mikrotik rady)
   </a>
   
+    <nav class="md-nav" aria-label="L2TP Server (mikrotik rady)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mikrotik" class="md-nav__link">
+    Mikrotik
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1829,6 +1855,16 @@
 <p class="admonition-title">Таким образом вы получите один логин и пароль, как создавать пользователей через этот скрипт пока не выяснил</p>
 </div>
 <div class="highlight"><pre><span></span><code>wget https://git.io/vpnsetup -O vpnsetup.sh <span class="o">&amp;&amp;</span> sudo sh vpnsetup.sh
+</code></pre></div>
+<h3 id="mikrotik">Mikrotik<a class="headerlink" href="#mikrotik" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Создаем интерфейс. Логин/пароль укажите свои, полученные на предыдущем шаге</span>
+add connect-to<span class="o">=</span><span class="m">13</span>.1.0.26 <span class="nv">disabled</span><span class="o">=</span>no ipsec-secret<span class="o">=</span>PASSWORD <span class="nv">name</span><span class="o">=</span>RKN-VPN <span class="nv">password</span><span class="o">=</span>PASSWORD use-ipsec<span class="o">=</span>yes <span class="nv">user</span><span class="o">=</span>vpnuser
+<span class="c1"># Разрешаем трафику из нашей сети ходить в VPN</span>
+add <span class="nv">action</span><span class="o">=</span>mark-routing <span class="nv">chain</span><span class="o">=</span>prerouting dst-address-list<span class="o">=</span>rkn new-routing-mark<span class="o">=</span>RKN <span class="nv">passthrough</span><span class="o">=</span>yes
+<span class="c1"># Добавляем маршрут, при каком условии трафик будет попадать в маршрут.</span>
+add <span class="nv">distance</span><span class="o">=</span><span class="m">1</span> <span class="nv">gateway</span><span class="o">=</span>RKN-VPN routing-mark<span class="o">=</span>RKN
+<span class="c1"># В маршрут будут попадать все сайты из списка RKN. На пример rutracker.org</span>
+add <span class="nv">address</span><span class="o">=</span>rutracker.org <span class="nv">list</span><span class="o">=</span>rkn
 </code></pre></div>
 <h2 id="mikrotik-client-openvpn-server">Mikrotik Client - OpenVPN Server<a class="headerlink" href="#mikrotik-client-openvpn-server" title="Permanent link">&para;</a></h2>
 <p>После использования скрипта авто-установки, чтобы OpenVPN Client в RouterOS сработал, нужно в файле /etc/openvpn/server/server.conf выставить:
