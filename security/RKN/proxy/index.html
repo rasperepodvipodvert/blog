@@ -1446,6 +1446,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#l2tp-server-mikrotik-rady" class="md-nav__link">
+    L2TP Server (mikrotik rady)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#mikrotik-client-openvpn-server" class="md-nav__link">
     Mikrotik Client - OpenVPN Server
   </a>
@@ -1778,6 +1785,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#l2tp-server-mikrotik-rady" class="md-nav__link">
+    L2TP Server (mikrotik rady)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#mikrotik-client-openvpn-server" class="md-nav__link">
     Mikrotik Client - OpenVPN Server
   </a>
@@ -1807,13 +1821,22 @@
 <li><a href="https://dgnz.ru/info/nastraivaem-svoj-vpn-l2tp-ipsec-na-digitalocean.html?utm_referrer=https%3A%2F%2Fdgnz.ru%2Finfo%2Fnastraivaem-svoj-vpn-l2tp-ipsec-na-digitalocean.html">Настройка VPN на DigitalOcean (l2tp)</a></li>
 <li><a href="https://gist.github.com/furdarius/ccb61a7bf8e747d43be5e908cc36dd92">rkn_unblock.md</a></li>
 </ul>
+<h2 id="l2tp-server-mikrotik-rady">L2TP Server (mikrotik rady)<a class="headerlink" href="#l2tp-server-mikrotik-rady" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">После запуска команды можно сразу устанавливать соединение на микротике и все будет работать</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Таким образом вы получите один логин и пароль, как создавать пользователей через этот скрипт пока не выяснил</p>
+</div>
+<div class="highlight"><pre><span></span><code>wget https://git.io/vpnsetup -O vpnsetup.sh <span class="o">&amp;&amp;</span> sudo sh vpnsetup.sh
+</code></pre></div>
 <h2 id="mikrotik-client-openvpn-server">Mikrotik Client - OpenVPN Server<a class="headerlink" href="#mikrotik-client-openvpn-server" title="Permanent link">&para;</a></h2>
 <p>После использования скрипта авто-установки, чтобы OpenVPN Client в RouterOS сработал, нужно в файле /etc/openvpn/server/server.conf выставить:
-Ubuntu2104
+Ubuntu2104</p>
 <div class="highlight"><pre><span></span><code>proto tcp
 auth SHA1
 #tls-auth
-</code></pre></div></p>
+</code></pre></div>
 <div class="highlight"><pre><span></span><code>
 </code></pre></div>
                 
