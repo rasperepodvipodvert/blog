@@ -12,6 +12,8 @@ theme:
   favicon: 'images/favicon.ico'
   logo: 'images/favicon.png'
   features:
+    - search.suggest
+    - navigation.top
     - tabs
   palette:
     primary: white
@@ -24,7 +26,10 @@ theme:
     repo: fontawesome/brands/git-alt
 
 plugins:
-  - search
+  - search:
+      lang:
+        - en
+        - ru
   - awesome-pages
   - blog:
       format: "(%m/%d/%y)"
