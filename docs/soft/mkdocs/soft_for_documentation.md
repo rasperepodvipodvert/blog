@@ -111,3 +111,5 @@ hide: true                  # Скрывает директорию
     mkdocs gh-deploy -m "Generate MkDocs site" -r %GITHUB_PAGES_REMOTE% -b %GITHUB_PAGES_BRANCH% -d %OUTPUTDIR% --force
     rd site /S /Q
     ``
+
+### [[Obsidian]]
