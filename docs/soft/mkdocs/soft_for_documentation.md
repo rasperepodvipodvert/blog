@@ -113,4 +113,4 @@ hide: true                  # Скрывает директорию
     rd site /S /Q
     ``
 
-### [Obsidian](../Obsidian.md)
+### [[Obsidian]]

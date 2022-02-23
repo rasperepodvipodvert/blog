@@ -1,3 +1,4 @@
 mkdocs-material
 mkdocs-blog-plugin
 mkdocs-awesome-pages-plugin
+mkdocs-roamlinks-plugin
