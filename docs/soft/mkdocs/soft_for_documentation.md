@@ -1,10 +1,11 @@
+---
 Title: Софт для написания документации
 Date: 2020-06-18 10:14
 Author: ifilatov
 Tags: soft, documentations, vscode, plugins
 Status: published
 Summary: Здесь собран софт, необходимый для написания документации.
-
+---
 ## Принцип написания документации
 
 - Все изменения конфигов должны попадать в [git](https://git-scm.com/)
@@ -112,4 +113,4 @@ hide: true                  # Скрывает директорию
     rd site /S /Q
     ``
 
-### [Obsidian](Obsidian.md)
+### [Obsidian](../Obsidian.md)
