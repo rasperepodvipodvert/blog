@@ -1,13 +1,18 @@
+---
+tags: [about, portfolio]
+---
 # Мои знания
 
-### DEVOPS (Администрирование)
+## DEV/OPS практики
 
-- GitLab CI
-- GitHub Actions
-- Linux/Windows более 15 лет
+- GitLab CI, GitHub Actions, Jenkins
+- Ansible
+- Linux / Windows 
+- Docker / Docker-compose
+- AWS, Azure, DO, FirstVDS, Reg.ru...etc
 
 
-### Программирование
+## Программирование
 
 - Знаю API Вконтакте
 - Знаю API FB
@@ -15,8 +20,10 @@
 - Знаю API Bitrix24
 - Python
 - Django
+- Groovy
 
 ## Любимые методологии
 
 - [GTD](https://ru.wikipedia.org/wiki/Getting_Things_Done)
 - [SCRUM](https://ru.wikipedia.org/wiki/SCRUM)
+- [Zettelcasten](https://habr.com/ru/post/508672/)
