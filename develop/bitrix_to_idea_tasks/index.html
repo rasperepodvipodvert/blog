@@ -17,7 +17,7 @@
         <meta name="author" content="ifilatov">
       
       <link rel="shortcut icon" href="../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-5.3.2">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-5.3.2">
     
     
       
@@ -1816,30 +1816,30 @@
 <p>оригинал <a href="https://habr.com/ru/post/427451/">здесь</a>, мои правки ниже</p>
 </blockquote>
 <h2 id="_1">Переменные<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="na">bitrix_url:     url вашего портала [sysadmin.bitrix24.ru]</span>
-<span class="na">group_id:       имя группы [1]</span>
-<span class="na">user_id:        id вашего пользователя [1] (админ обычно №1)</span>
-<span class="na">web_hook_key:   ключ входящего вебхука</span>
+<div class="highlight"><pre><span></span><code><span class="na">bitrix_url:     url вашего портала [sysadmin.bitrix24.ru]</span><span class="w"></span>
+<span class="na">group_id:       имя группы [1]</span><span class="w"></span>
+<span class="na">user_id:        id вашего пользователя [1] (админ обычно №1)</span><span class="w"></span>
+<span class="na">web_hook_key:   ключ входящего вебхука</span><span class="w"></span>
 </code></pre></div>
 <h2 id="json-url">JSON URL<a class="headerlink" href="#json-url" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="c1"># Все открытые задачи</span>
-<span class="na">Task List URL: https://{bitrix_url}/rest/{user_id}/{web_hook_key}/task.item.list.json?ORDER[]</span><span class="o">=</span><span class="s">&amp;FILTER[RESPONSIBLE_ID]={user_id}}&amp;FILTER[%3CREAL_STATUS]=4&amp;PARAMS[]=&amp;SELECT[]=*</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Все открытые задачи</span><span class="w"></span>
+<span class="na">Task List URL: https://{bitrix_url}/rest/{user_id}/{web_hook_key}/task.item.list.json?ORDER[]</span><span class="o">=</span><span class="s">&amp;FILTER[RESPONSIBLE_ID]={user_id}}&amp;FILTER[%3CREAL_STATUS]=4&amp;PARAMS[]=&amp;SELECT[]=*</span><span class="w"></span>
 
-<span class="c1"># Все открытые задачи только из определенной группы</span>
-<span class="na">Single Task URL: https://{bitrix_url}/rest/{user_id}/{web_hook_key}/task.item.list.json?ORDER[]</span><span class="o">=</span><span class="s">&amp;FILTER[RESPONSIBLE_ID]={user_id}}&amp;FILTER[%3CREAL_STATUS]=4&amp;PARAMS[]=&amp;SELECT[]=*&amp;FILTER[GROUP_ID]={group_id}</span>
+<span class="c1"># Все открытые задачи только из определенной группы</span><span class="w"></span>
+<span class="na">Single Task URL: https://{bitrix_url}/rest/{user_id}/{web_hook_key}/task.item.list.json?ORDER[]</span><span class="o">=</span><span class="s">&amp;FILTER[RESPONSIBLE_ID]={user_id}}&amp;FILTER[%3CREAL_STATUS]=4&amp;PARAMS[]=&amp;SELECT[]=*&amp;FILTER[GROUP_ID]={group_id}</span><span class="w"></span>
 </code></pre></div>
 <h2 id="_2">Сопоставление полей<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="na">tasks                  | result[*]</span>
-<span class="na">id                     | ID</span>
-<span class="na">summary                | TITLE</span>
-<span class="na">description            | DESCRIPTION</span>
-<span class="na">updated                | CHANGED_DATE</span>
-<span class="na">created                | CREATED_DATE</span>
-<span class="na">singleTask-id          | result.ID</span>
-<span class="na">singleTask-summary     | result.TITLE</span>
-<span class="na">singleTask-description | result.DESCRIPTION</span>
-<span class="na">singleTask-updated     | result.CHANGED_DATE</span>
-<span class="na">singleTask-created     | result.CREATED_DATE</span>
+<div class="highlight"><pre><span></span><code><span class="na">tasks                  | result[*]</span><span class="w"></span>
+<span class="na">id                     | ID</span><span class="w"></span>
+<span class="na">summary                | TITLE</span><span class="w"></span>
+<span class="na">description            | DESCRIPTION</span><span class="w"></span>
+<span class="na">updated                | CHANGED_DATE</span><span class="w"></span>
+<span class="na">created                | CREATED_DATE</span><span class="w"></span>
+<span class="na">singleTask-id          | result.ID</span><span class="w"></span>
+<span class="na">singleTask-summary     | result.TITLE</span><span class="w"></span>
+<span class="na">singleTask-description | result.DESCRIPTION</span><span class="w"></span>
+<span class="na">singleTask-updated     | result.CHANGED_DATE</span><span class="w"></span>
+<span class="na">singleTask-created     | result.CREATED_DATE</span><span class="w"></span>
 </code></pre></div>
 <p><img alt="Сопоставление полей" src="https://hsto.org/webt/re/9e/b7/re9eb7r1mgu0crwpkapyvjovaea.png" /></p>
                 

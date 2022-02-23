@@ -17,7 +17,7 @@
         <meta name="author" content="ifilatov">
       
       <link rel="shortcut icon" href="../../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-5.3.2">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-5.3.2">
     
     
       
@@ -1989,7 +1989,9 @@
 <div class="highlight"><pre><span></span><code>grep <span class="s1">&#39;Connection closed&#39;</span> /var/log/secure <span class="p">|</span>cut -d <span class="s1">&#39; &#39;</span> -f <span class="m">9</span><span class="p">|</span>sort<span class="p">|</span>uniq -c<span class="p">|</span>sort -n
 </code></pre></div>
 <h2 id="_4">Рецепты<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<details class="summary"><summary>Проверка водящих подключений к системе.</summary><div class="highlight"><pre><span></span><code>lsof -i
+<details class="summary">
+<summary>Проверка водящих подключений к системе.</summary>
+<div class="highlight"><pre><span></span><code>lsof -i
 lsof -i :80
 grep <span class="m">80</span> /etc/services
 netstat -antup

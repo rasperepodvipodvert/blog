@@ -17,7 +17,7 @@
         <meta name="author" content="ifilatov">
       
       <link rel="shortcut icon" href="../../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-5.3.2">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-5.3.2">
     
     
       
@@ -1925,7 +1925,9 @@
 <li>Все изменения конфигов должны попадать в <a href="https://git-scm.com/">git</a></li>
 <li>Документация серверов должна вестить от корня <ins class="critic">/</ins></li>
 </ul>
-<details class="summary"><summary>Пример</summary><div class="highlight"><pre><span></span><code>├── server.ru
+<details class="summary">
+<summary>Пример</summary>
+<div class="highlight"><pre><span></span><code>├── server.ru
 │   ├── etc
 │   │   ├── cron.d
 │   │   │   ├── 0hourly
@@ -1981,9 +1983,9 @@ Awesome-pages позволяет настраивать отображение �
 <div class="highlight"><pre><span></span><code>pip install mkdocs-awesome-pages-plugin
 </code></pre></div>
 <p>Добавте это в <code>mkdocs.yml</code></p>
-<div class="highlight"><pre><span></span><code><span class="nt">plugins</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">search</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">awesome-pages</span>
+<div class="highlight"><pre><span></span><code><span class="nt">plugins</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">search</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">awesome-pages</span><span class="w"></span>
 </code></pre></div>
 <p>Использование:</p>
 <p>Просто создаем файл <code>.pages</code> в директории где хотим использовать плагин и пишем в него параметры</p>
@@ -1996,7 +1998,9 @@ hide: <span class="nb">true</span>                  <span class="c1"># Скры�
 <li><a href="https://squidfunk.github.io/mkdocs-material/">Mkdocs Material</a> - mkdocs с темой оформления material</li>
 </ul>
 <h4 id="deploy-github">Deploy документации в GitHub<a class="headerlink" href="#deploy-github" title="Permanent link">&para;</a></h4>
-<details class="summary"><summary>deploy.bat</summary><div class="admonition info">
+<details class="summary">
+<summary>deploy.bat</summary>
+<div class="admonition info">
 <p class="admonition-title">В данном примере используются два репозитория <code>origin</code>, <code>gh-pages</code> и branch <code>gh-pages</code> для публичного репозитория</p>
 </div>
 <p><code>cmd

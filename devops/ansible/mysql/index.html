@@ -17,7 +17,7 @@
         <meta name="author" content="ifilatov">
       
       <link rel="shortcut icon" href="../../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-5.3.2">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-5.3.2">
     
     
       
@@ -1741,47 +1741,47 @@
                 
                 
                 <h1 id="mysql">Не очевидные моменты работы с MySQL<a class="headerlink" href="#mysql" title="Permanent link">&para;</a></h1>
-<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Генерируем факт, что пароль у нас такой, и используем его дальше</span>
-  <span class="nt">set_fact</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">db_password={{db.password}}</span>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Генерируем факт, что пароль у нас такой, и используем его дальше</span><span class="w"></span>
+<span class="w">  </span><span class="nt">set_fact</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">db_password={{db.password}}</span><span class="w"></span>
 
-<span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="s">&quot;Удаление</span><span class="nv"> </span><span class="s">базы</span><span class="nv"> </span><span class="s">данных</span><span class="nv"> </span><span class="s">{{db.name}}&quot;</span>
-  <span class="nt">mysql_db</span><span class="p">:</span>
-    <span class="nt">login_user</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">root</span>
-    <span class="nt">login_password</span><span class="p">:</span> <span class="s">&quot;{{db.root_password}}&quot;</span>
-    <span class="nt">login_host</span><span class="p">:</span> <span class="s">&quot;{{db.host}}&quot;</span>
-    <span class="nt">name</span><span class="p">:</span> <span class="s">&quot;{{db.name}}&quot;</span>
-    <span class="nt">state</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">absent</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Удаление</span><span class="nv"> </span><span class="s">базы</span><span class="nv"> </span><span class="s">данных</span><span class="nv"> </span><span class="s">{{db.name}}&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="nt">mysql_db</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">login_user</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root</span><span class="w"></span>
+<span class="w">    </span><span class="nt">login_password</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{db.root_password}}&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">login_host</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{db.host}}&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{db.name}}&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">absent</span><span class="w"></span>
 
-<span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="s">&quot;Создание</span><span class="nv"> </span><span class="s">базы</span><span class="nv"> </span><span class="s">данных</span><span class="nv"> </span><span class="s">{{db.name}}&quot;</span>
-  <span class="nt">mysql_db</span><span class="p">:</span>
-    <span class="nt">login_user</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">root</span>
-    <span class="nt">login_password</span><span class="p">:</span> <span class="s">&quot;{{db.root_password}}&quot;</span>
-    <span class="nt">login_host</span><span class="p">:</span> <span class="s">&quot;{{db.host}}&quot;</span>
-    <span class="nt">name</span><span class="p">:</span> <span class="s">&quot;{{db.name}}&quot;</span>
-    <span class="nt">encoding</span><span class="p">:</span> <span class="s">&quot;utf8&quot;</span>
-    <span class="nt">state</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">present</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Создание</span><span class="nv"> </span><span class="s">базы</span><span class="nv"> </span><span class="s">данных</span><span class="nv"> </span><span class="s">{{db.name}}&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="nt">mysql_db</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">login_user</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root</span><span class="w"></span>
+<span class="w">    </span><span class="nt">login_password</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{db.root_password}}&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">login_host</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{db.host}}&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{db.name}}&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">encoding</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;utf8&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">present</span><span class="w"></span>
 
-<span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="s">&quot;Удаление</span><span class="nv"> </span><span class="s">пользователя</span><span class="nv"> </span><span class="s">{{db.user}}&quot;</span>
-  <span class="nt">mysql_user</span><span class="p">:</span>
-    <span class="nt">login_user</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">root</span>
-    <span class="nt">login_password</span><span class="p">:</span> <span class="s">&quot;{{db.root_password}}&quot;</span>
-    <span class="nt">login_host</span><span class="p">:</span> <span class="s">&quot;{{db.host}}&quot;</span>
-    <span class="nt">name</span><span class="p">:</span> <span class="s">&quot;{{db.user}}&quot;</span>
-    <span class="nt">host_all</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">yes</span>
-    <span class="nt">state</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">absent</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Удаление</span><span class="nv"> </span><span class="s">пользователя</span><span class="nv"> </span><span class="s">{{db.user}}&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="nt">mysql_user</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">login_user</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root</span><span class="w"></span>
+<span class="w">    </span><span class="nt">login_password</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{db.root_password}}&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">login_host</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{db.host}}&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{db.user}}&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">host_all</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span><span class="w"></span>
+<span class="w">    </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">absent</span><span class="w"></span>
 
-<span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="s">&quot;Создание</span><span class="nv"> </span><span class="s">пользователя</span><span class="nv"> </span><span class="s">{{db.user}}</span><span class="nv"> </span><span class="s">{{db_password}}&quot;</span>
-  <span class="nt">mysql_user</span><span class="p">:</span>
-    <span class="nt">login_user</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">root</span>
-    <span class="nt">login_password</span><span class="p">:</span> <span class="s">&quot;{{db.root_password}}&quot;</span>
-    <span class="nt">login_host</span><span class="p">:</span> <span class="s">&quot;{{db.host}}&quot;</span>
-    <span class="nt">name</span><span class="p">:</span> <span class="s">&quot;{{db.user}}&quot;</span>
-    <span class="nt">password</span><span class="p">:</span> <span class="s">&quot;{{</span><span class="nv"> </span><span class="s">db_password</span><span class="nv"> </span><span class="s">}}&quot;</span>
-    <span class="nt">update_password</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">on_create</span>
-    <span class="nt">priv</span><span class="p">:</span> <span class="s">&#39;{{db.name}}.*:ALL&#39;</span>
-    <span class="nt">state</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">present</span>
-    <span class="nt">host</span><span class="p">:</span> <span class="s">&#39;%&#39;</span>
-  <span class="nt">no_log</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">no</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Создание</span><span class="nv"> </span><span class="s">пользователя</span><span class="nv"> </span><span class="s">{{db.user}}</span><span class="nv"> </span><span class="s">{{db_password}}&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="nt">mysql_user</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">login_user</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root</span><span class="w"></span>
+<span class="w">    </span><span class="nt">login_password</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{db.root_password}}&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">login_host</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{db.host}}&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{db.user}}&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">db_password</span><span class="nv"> </span><span class="s">}}&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">update_password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">on_create</span><span class="w"></span>
+<span class="w">    </span><span class="nt">priv</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{db.name}}.*:ALL&#39;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">present</span><span class="w"></span>
+<span class="w">    </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;%&#39;</span><span class="w"></span>
+<span class="w">  </span><span class="nt">no_log</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">no</span><span class="w"></span>
 </code></pre></div>
                 
                   

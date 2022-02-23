@@ -17,7 +17,7 @@
         <meta name="author" content="ifilatov">
       
       <link rel="shortcut icon" href="../../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-5.3.2">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-5.3.2">
     
     
       
@@ -1854,21 +1854,21 @@ python3 -m pip install wheel av
 pip3 install homeassistant
 </code></pre></div>
 <h2 id="systemd">Автозапуск через systemd<a class="headerlink" href="#systemd" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="k">[Unit]</span>
-<span class="na">Description</span><span class="o">=</span><span class="s">Home Assistant</span>
-<span class="na">After</span><span class="o">=</span><span class="s">network-online.target</span>
+<div class="highlight"><pre><span></span><code><span class="k">[Unit]</span><span class="w"></span>
+<span class="na">Description</span><span class="o">=</span><span class="s">Home Assistant</span><span class="w"></span>
+<span class="na">After</span><span class="o">=</span><span class="s">network-online.target</span><span class="w"></span>
 
-<span class="k">[Service]</span>
-<span class="na">Type</span><span class="o">=</span><span class="s">simple</span>
-<span class="na">User</span><span class="o">=</span><span class="s">root</span>
-<span class="na">WorkingDirectory</span><span class="o">=</span><span class="s">/root/.homeassistant</span>
-<span class="na">ExecStart</span><span class="o">=</span><span class="s">/usr/local/bin/hass -c &quot;/root/.homeassistant&quot;</span>
-<span class="na">ExecReload</span><span class="o">=</span><span class="s">/bin/kill -HUP $MAINPID</span>
-<span class="na">KillMode</span><span class="o">=</span><span class="s">process</span>
-<span class="na">Restart</span><span class="o">=</span><span class="s">on-failure</span>
+<span class="k">[Service]</span><span class="w"></span>
+<span class="na">Type</span><span class="o">=</span><span class="s">simple</span><span class="w"></span>
+<span class="na">User</span><span class="o">=</span><span class="s">root</span><span class="w"></span>
+<span class="na">WorkingDirectory</span><span class="o">=</span><span class="s">/root/.homeassistant</span><span class="w"></span>
+<span class="na">ExecStart</span><span class="o">=</span><span class="s">/usr/local/bin/hass -c &quot;/root/.homeassistant&quot;</span><span class="w"></span>
+<span class="na">ExecReload</span><span class="o">=</span><span class="s">/bin/kill -HUP $MAINPID</span><span class="w"></span>
+<span class="na">KillMode</span><span class="o">=</span><span class="s">process</span><span class="w"></span>
+<span class="na">Restart</span><span class="o">=</span><span class="s">on-failure</span><span class="w"></span>
 
-<span class="k">[Install]</span>
-<span class="na">WantedBy</span><span class="o">=</span><span class="s">multi-user.target</span>
+<span class="k">[Install]</span><span class="w"></span>
+<span class="na">WantedBy</span><span class="o">=</span><span class="s">multi-user.target</span><span class="w"></span>
 </code></pre></div>
 <h2 id="python">Обновление python<a class="headerlink" href="#python" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="c1"># качаем свежий python</span>

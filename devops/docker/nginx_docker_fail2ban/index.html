@@ -17,7 +17,7 @@
         <meta name="author" content="ifilatov">
       
       <link rel="shortcut icon" href="../../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-5.3.2">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-5.3.2">
     
     
       
@@ -1789,15 +1789,15 @@
                 <p>Если вы, так же как и я, используете docker для публикации своих приложений в production, то наверняка хотите их защитить с помощью fail2ban от подбора паролей и черезмерной активности!
 Дак вот если все делать по мануалам из интернета - ничего у вапс не получится, а все потому, что iptables (ufw, firewalld) в linux с установленным docker окружением работают несколько иначе!</p>
 <h2 id="_1">Конфиги<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="k">[nginx-badbots]</span>
-<span class="na">enabled</span>  <span class="o">=</span> <span class="s">true</span>
-<span class="na">port</span>     <span class="o">=</span> <span class="s">http,https</span>
-<span class="na">filter</span>   <span class="o">=</span> <span class="s">nginx-badbots</span>
-<span class="na">chain</span>    <span class="o">=</span> <span class="s">DOCKER-USER</span>
-<span class="na">logpath</span>  <span class="o">=</span> <span class="s">/docker/logs/nginx/*ccess.log</span>
-<span class="na">maxretry</span> <span class="o">=</span> <span class="s">1</span>
-<span class="na">findtime</span> <span class="o">=</span> <span class="s">604800</span>
-<span class="na">bantime</span>  <span class="o">=</span> <span class="s">604800</span>
+<div class="highlight"><pre><span></span><code><span class="k">[nginx-badbots]</span><span class="w"></span>
+<span class="na">enabled</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="s">true</span><span class="w"></span>
+<span class="na">port</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="s">http,https</span><span class="w"></span>
+<span class="na">filter</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="s">nginx-badbots</span><span class="w"></span>
+<span class="na">chain</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s">DOCKER-USER</span><span class="w"></span>
+<span class="na">logpath</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="s">/docker/logs/nginx/*ccess.log</span><span class="w"></span>
+<span class="na">maxretry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">1</span><span class="w"></span>
+<span class="na">findtime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">604800</span><span class="w"></span>
+<span class="na">bantime</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="s">604800</span><span class="w"></span>
 </code></pre></div>
                 
                   

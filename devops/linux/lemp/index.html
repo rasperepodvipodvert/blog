@@ -17,7 +17,7 @@
         <meta name="author" content="ifilatov">
       
       <link rel="shortcut icon" href="../../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-5.3.2">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-5.3.2">
     
     
       
@@ -1822,155 +1822,161 @@ sudo passwd site1
 sudo mkdir /var/www/site1
 sudo chown site1:site1 -R /var/www/site1
 </code></pre></div>
-<details class="note"><summary>/etc/php/7.3/fpm/pool.d/site1.conf</summary><div class="highlight"><pre><span></span><code><span class="na">[site1]                                     # идентификатор сайта</span>
-<span class="na">user</span> <span class="o">=</span> <span class="s">site1                                # пользователь в linux</span>
-<span class="na">group</span> <span class="o">=</span> <span class="s">site1                               # группа пользователя</span>
-<span class="na">listen</span> <span class="o">=</span> <span class="s">/var/run/php5-fpm-site1.sock       # расположение сокета который прослушивает php-fpm </span>
-<span class="na">listen.owner</span> <span class="o">=</span> <span class="s">www-data                     # пользователь от которого запущен nginx</span>
-<span class="na">listen.group</span> <span class="o">=</span> <span class="s">www-data                     # группа от которого запущен nginx</span>
-<span class="na">php_admin_value[disable_functions]</span> <span class="o">=</span> <span class="s">exec,passthru,shell_exec,system</span>
-<span class="na">php_admin_flag[allow_url_fopen]</span> <span class="o">=</span> <span class="s">off</span>
-<span class="na">pm</span> <span class="o">=</span> <span class="s">dynamic</span>
-<span class="na">pm.max_children</span> <span class="o">=</span> <span class="s">5</span>
-<span class="na">pm.start_servers</span> <span class="o">=</span> <span class="s">2</span>
-<span class="na">pm.min_spare_servers</span> <span class="o">=</span> <span class="s">1</span>
-<span class="na">pm.max_spare_servers</span> <span class="o">=</span> <span class="s">3</span>
-<span class="na">chdir</span> <span class="o">=</span> <span class="s">/</span>
+<details class="note">
+<summary>/etc/php/7.3/fpm/pool.d/site1.conf</summary>
+<div class="highlight"><pre><span></span><code><span class="na">[site1]                                     # идентификатор сайта</span><span class="w"></span>
+<span class="na">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">site1                                # пользователь в linux</span><span class="w"></span>
+<span class="na">group</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">site1                               # группа пользователя</span><span class="w"></span>
+<span class="na">listen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/var/run/php5-fpm-site1.sock       # расположение сокета который прослушивает php-fpm </span><span class="w"></span>
+<span class="na">listen.owner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">www-data                     # пользователь от которого запущен nginx</span><span class="w"></span>
+<span class="na">listen.group</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">www-data                     # группа от которого запущен nginx</span><span class="w"></span>
+<span class="na">php_admin_value[disable_functions]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">exec,passthru,shell_exec,system</span><span class="w"></span>
+<span class="na">php_admin_flag[allow_url_fopen]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">off</span><span class="w"></span>
+<span class="na">pm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">dynamic</span><span class="w"></span>
+<span class="na">pm.max_children</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">5</span><span class="w"></span>
+<span class="na">pm.start_servers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">2</span><span class="w"></span>
+<span class="na">pm.min_spare_servers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">1</span><span class="w"></span>
+<span class="na">pm.max_spare_servers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">3</span><span class="w"></span>
+<span class="na">chdir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/</span><span class="w"></span>
 </code></pre></div>
 </details>
-<details class="note"><summary>/etc/php/7.3/fpm/php.ini</summary><div class="highlight"><pre><span></span><code><span class="k">[php]</span>
-<span class="na">short_open_tag</span> <span class="o">=</span> <span class="s">On</span>
-<span class="na">display_errors</span> <span class="o">=</span> <span class="s">On</span>
-<span class="na">error_log</span> <span class="o">=</span> <span class="s">&quot;/var/log/php/error.log&quot;</span>
-<span class="na">error_reporting</span> <span class="o">=</span> <span class="s">E_ALL</span>
-<span class="na">log_errors</span> <span class="o">=</span> <span class="s">On</span>
-<span class="na">display_startup_errors</span> <span class="o">=</span> <span class="s">On</span>
-<span class="na">cgi.fix_pathinfo</span> <span class="o">=</span> <span class="s">0</span>
-<span class="na">date.timezone</span> <span class="o">=</span> <span class="s">&quot;Europe/Moscow&quot;</span>
-<span class="na">mbstring.func_overload</span> <span class="o">=</span> <span class="s">2</span>
-<span class="na">mbstring.internal_encoding</span> <span class="o">=</span> <span class="s">&quot;UTF-8&quot;</span>
-<span class="na">max_input_vars</span> <span class="o">=</span> <span class="s">10000</span>
-<span class="na">post_max_size</span> <span class="o">=</span> <span class="s">1024M</span>
-<span class="na">memory_limit</span> <span class="o">=</span> <span class="s">256M</span>
-<span class="na">upload_max_filesize</span> <span class="o">=</span> <span class="s">1024M</span>
+<details class="note">
+<summary>/etc/php/7.3/fpm/php.ini</summary>
+<div class="highlight"><pre><span></span><code><span class="k">[php]</span><span class="w"></span>
+<span class="na">short_open_tag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">On</span><span class="w"></span>
+<span class="na">display_errors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">On</span><span class="w"></span>
+<span class="na">error_log</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;/var/log/php/error.log&quot;</span><span class="w"></span>
+<span class="na">error_reporting</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">E_ALL</span><span class="w"></span>
+<span class="na">log_errors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">On</span><span class="w"></span>
+<span class="na">display_startup_errors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">On</span><span class="w"></span>
+<span class="na">cgi.fix_pathinfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">0</span><span class="w"></span>
+<span class="na">date.timezone</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Europe/Moscow&quot;</span><span class="w"></span>
+<span class="na">mbstring.func_overload</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">2</span><span class="w"></span>
+<span class="na">mbstring.internal_encoding</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;UTF-8&quot;</span><span class="w"></span>
+<span class="na">max_input_vars</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">10000</span><span class="w"></span>
+<span class="na">post_max_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">1024M</span><span class="w"></span>
+<span class="na">memory_limit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">256M</span><span class="w"></span>
+<span class="na">upload_max_filesize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">1024M</span><span class="w"></span>
 
-<span class="k">[opcache]</span>
-<span class="na">opcache.revalidate_freq</span> <span class="o">=</span> <span class="s">0</span>
-<span class="na">opcache.validate_timestamps</span> <span class="o">=</span> <span class="s">1</span>
-<span class="na">opcache.max_accelerated_files</span> <span class="o">=</span> <span class="s">100000</span>
-<span class="na">opcache.memory_consumption</span> <span class="o">=</span> <span class="s">512</span>
-<span class="na">opcache.interned_strings_buffer</span> <span class="o">=</span> <span class="s">64</span>
-<span class="na">opcache.fast_shutdown</span> <span class="o">=</span> <span class="s">1</span>
-<span class="na">opcache.error_log</span> <span class="o">=</span> <span class="s">&quot;/var/log/php/opcache.log&quot;</span>
+<span class="k">[opcache]</span><span class="w"></span>
+<span class="na">opcache.revalidate_freq</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">0</span><span class="w"></span>
+<span class="na">opcache.validate_timestamps</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">1</span><span class="w"></span>
+<span class="na">opcache.max_accelerated_files</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">100000</span><span class="w"></span>
+<span class="na">opcache.memory_consumption</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">512</span><span class="w"></span>
+<span class="na">opcache.interned_strings_buffer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">64</span><span class="w"></span>
+<span class="na">opcache.fast_shutdown</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">1</span><span class="w"></span>
+<span class="na">opcache.error_log</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;/var/log/php/opcache.log&quot;</span><span class="w"></span>
 
-<span class="k">[xdebug]</span>
-<span class="na">xdebug.remote_host</span> <span class="o">=</span> <span class="s">&quot;192.168.0.2&quot;</span>
-<span class="na">xdebug.remote_port</span> <span class="o">=</span> <span class="s">9000</span>
-<span class="na">xdebug.auto_trace</span> <span class="o">=</span> <span class="s">0</span>
-<span class="na">xdebug.default_enable</span> <span class="o">=</span> <span class="s">1</span>
-<span class="na">xdebug.idekey</span> <span class="o">=</span> <span class="s">&quot;PhpStorm&quot;</span>
-<span class="na">xdebug.max_nesting_level</span> <span class="o">=</span> <span class="s">250</span>
-<span class="na">xdebug.profiler_enable</span> <span class="o">=</span> <span class="s">0</span>
-<span class="na">xdebug.profiler_enable_trigger</span> <span class="o">=</span> <span class="s">0</span>
-<span class="na">xdebug.profiler_output_dir</span> <span class="o">=</span> <span class="s">&quot;/tmp/&quot;</span>
-<span class="na">xdebug.profiler_output_name</span> <span class="o">=</span> <span class="s">&quot;cachegrind.out.%H%R&quot;</span>
-<span class="na">xdebug.remote_enable</span> <span class="o">=</span> <span class="s">1</span>
+<span class="k">[xdebug]</span><span class="w"></span>
+<span class="na">xdebug.remote_host</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;192.168.0.2&quot;</span><span class="w"></span>
+<span class="na">xdebug.remote_port</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">9000</span><span class="w"></span>
+<span class="na">xdebug.auto_trace</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">0</span><span class="w"></span>
+<span class="na">xdebug.default_enable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">1</span><span class="w"></span>
+<span class="na">xdebug.idekey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;PhpStorm&quot;</span><span class="w"></span>
+<span class="na">xdebug.max_nesting_level</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">250</span><span class="w"></span>
+<span class="na">xdebug.profiler_enable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">0</span><span class="w"></span>
+<span class="na">xdebug.profiler_enable_trigger</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">0</span><span class="w"></span>
+<span class="na">xdebug.profiler_output_dir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;/tmp/&quot;</span><span class="w"></span>
+<span class="na">xdebug.profiler_output_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;cachegrind.out.%H%R&quot;</span><span class="w"></span>
+<span class="na">xdebug.remote_enable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">1</span><span class="w"></span>
 </code></pre></div>
 </details>
 <h2 id="nginx">Настройка nginx<a class="headerlink" href="#nginx" title="Permanent link">&para;</a></h2>
-<details class="note"><summary>/etc/nginx/sites-available/site1.conf</summary><div class="highlight"><pre><span></span><code><span class="k">server</span> <span class="p">{</span>
-    <span class="kn">listen</span> <span class="mi">80</span><span class="p">;</span>
-    <span class="kn">listen</span> <span class="s">[::]:80</span><span class="p">;</span>
-    <span class="kn">root</span> <span class="s">/var/www/site1</span><span class="p">;</span>
-    <span class="kn">index</span> <span class="s">index.php</span> <span class="s">index.html</span> <span class="s">index.htm</span><span class="p">;</span>
-    <span class="kn">server_name</span> <span class="s">site1.ru</span><span class="p">;</span>
+<details class="note">
+<summary>/etc/nginx/sites-available/site1.conf</summary>
+<div class="highlight"><pre><span></span><code><span class="k">server</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kn">listen</span><span class="w"> </span><span class="mi">80</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kn">listen</span><span class="w"> </span><span class="s">[::]:80</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kn">root</span><span class="w"> </span><span class="s">/var/www/site1</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kn">index</span><span class="w"> </span><span class="s">index.php</span><span class="w"> </span><span class="s">index.html</span><span class="w"> </span><span class="s">index.htm</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kn">server_name</span><span class="w"> </span><span class="s">site1.ru</span><span class="p">;</span><span class="w"></span>
 
-    <span class="kn">upstream</span> <span class="s">php-fpm</span> <span class="p">{</span>
-        <span class="kn">server</span> <span class="s">unix:/var/run/php5-fpm-site1.sock</span><span class="p">;</span> <span class="c1"># путь до сокета php-fpm конкретного сайта</span>
-    <span class="p">}</span>
+<span class="w">    </span><span class="kn">upstream</span><span class="w"> </span><span class="s">php-fpm</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kn">server</span><span class="w"> </span><span class="s">unix:/var/run/php5-fpm-site1.sock</span><span class="p">;</span><span class="w"> </span><span class="c1"># путь до сокета php-fpm конкретного сайта</span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-    <span class="kn">if</span> <span class="s">(!-e</span> <span class="nv">$request_filename</span><span class="s">)</span> <span class="p">{</span>
-       <span class="kn">rewrite</span>  <span class="s">^(.*)</span>$  <span class="s">/bitrix/urlrewrite.php</span> <span class="s">last</span><span class="p">;</span>
-    <span class="p">}</span>
+<span class="w">    </span><span class="kn">if</span><span class="w"> </span><span class="s">(!-e</span><span class="w"> </span><span class="nv">$request_filename</span><span class="s">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">       </span><span class="kn">rewrite</span><span class="w">  </span><span class="s">^(.*)</span>$<span class="w">  </span><span class="s">/bitrix/urlrewrite.php</span><span class="w"> </span><span class="s">last</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-    <span class="kn">location</span> <span class="s">@bitrix</span> <span class="p">{</span>
-        <span class="kn">include</span> <span class="s">snippets/fastcgi-php.conf</span><span class="p">;</span>
-        <span class="kn">fastcgi_pass</span> <span class="s">php-fpm</span><span class="p">;</span>
-        <span class="kn">fastcgi_param</span> <span class="s">SCRIPT_FILENAME</span> <span class="nv">$document_root/bitrix/urlrewrite.php</span><span class="p">;</span>
-        <span class="p">}</span>
+<span class="w">    </span><span class="kn">location</span><span class="w"> </span><span class="s">@bitrix</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kn">include</span><span class="w"> </span><span class="s">snippets/fastcgi-php.conf</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="kn">fastcgi_pass</span><span class="w"> </span><span class="s">php-fpm</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="kn">fastcgi_param</span><span class="w"> </span><span class="s">SCRIPT_FILENAME</span><span class="w"> </span><span class="nv">$document_root/bitrix/urlrewrite.php</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
 
-    <span class="kn">location</span> <span class="p">~</span> <span class="sr">\.php$</span> <span class="p">{</span>
-        <span class="kn">if</span> <span class="s">(!-f</span> <span class="nv">$request_filename</span><span class="s">)</span> <span class="p">{</span>
-          <span class="kn">rewrite</span>  <span class="s">^(.*)/index.php</span>$  <span class="nv">$1/</span> <span class="s">redirect</span><span class="p">;</span>
-        <span class="p">}</span>
-        <span class="kn">include</span> <span class="s">fastcgi_params</span><span class="p">;</span>
-        <span class="kn">fastcgi_pass</span> <span class="s">php-fpm</span><span class="p">;</span>
-        <span class="kn">fastcgi_index</span> <span class="s">index.php</span><span class="p">;</span>
-        <span class="kn">fastcgi_send_timeout</span> <span class="mi">21600</span><span class="p">;</span>
-        <span class="kn">fastcgi_read_timeout</span> <span class="mi">21600</span><span class="p">;</span>
-        <span class="kn">fastcgi_param</span> <span class="s">SCRIPT_FILENAME</span> <span class="nv">$document_root$fastcgi_script_name</span><span class="p">;</span>
-    <span class="p">}</span>
+<span class="w">    </span><span class="kn">location</span><span class="w"> </span><span class="p">~</span><span class="w"> </span><span class="sr">\.php$</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kn">if</span><span class="w"> </span><span class="s">(!-f</span><span class="w"> </span><span class="nv">$request_filename</span><span class="s">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="kn">rewrite</span><span class="w">  </span><span class="s">^(.*)/index.php</span>$<span class="w">  </span><span class="nv">$1/</span><span class="w"> </span><span class="s">redirect</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="kn">include</span><span class="w"> </span><span class="s">fastcgi_params</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="kn">fastcgi_pass</span><span class="w"> </span><span class="s">php-fpm</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="kn">fastcgi_index</span><span class="w"> </span><span class="s">index.php</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="kn">fastcgi_send_timeout</span><span class="w"> </span><span class="mi">21600</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="kn">fastcgi_read_timeout</span><span class="w"> </span><span class="mi">21600</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="kn">fastcgi_param</span><span class="w"> </span><span class="s">SCRIPT_FILENAME</span><span class="w"> </span><span class="nv">$document_root$fastcgi_script_name</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-    <span class="kn">location</span> <span class="p">=</span> <span class="s">/restore.php</span> <span class="p">{</span>
-        <span class="kn">include</span> <span class="s">fastcgi_params</span><span class="p">;</span>
-        <span class="kn">fastcgi_pass</span> <span class="s">php-fpm</span><span class="p">;</span>
-        <span class="kn">fastcgi_index</span> <span class="s">index.php</span><span class="p">;</span>
-        <span class="kn">fastcgi_send_timeout</span> <span class="mi">21600</span><span class="p">;</span>
-        <span class="kn">fastcgi_read_timeout</span> <span class="mi">21600</span><span class="p">;</span>
-        <span class="kn">fastcgi_param</span> <span class="s">SCRIPT_FILENAME</span> <span class="nv">$document_root$fastcgi_script_name</span><span class="p">;</span>
-        <span class="kn">client_body_buffer_size</span> <span class="mi">1024m</span><span class="p">;</span>
-        <span class="kn">client_max_body_size</span> <span class="mi">1024m</span><span class="p">;</span>
-    <span class="p">}</span>
+<span class="w">    </span><span class="kn">location</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">/restore.php</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kn">include</span><span class="w"> </span><span class="s">fastcgi_params</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="kn">fastcgi_pass</span><span class="w"> </span><span class="s">php-fpm</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="kn">fastcgi_index</span><span class="w"> </span><span class="s">index.php</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="kn">fastcgi_send_timeout</span><span class="w"> </span><span class="mi">21600</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="kn">fastcgi_read_timeout</span><span class="w"> </span><span class="mi">21600</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="kn">fastcgi_param</span><span class="w"> </span><span class="s">SCRIPT_FILENAME</span><span class="w"> </span><span class="nv">$document_root$fastcgi_script_name</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="kn">client_body_buffer_size</span><span class="w"> </span><span class="mi">1024m</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="kn">client_max_body_size</span><span class="w"> </span><span class="mi">1024m</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-    <span class="kn">location</span> <span class="p">~</span> <span class="sr">/upload/</span> <span class="p">{</span>
-        <span class="kn">client_body_buffer_size</span> <span class="mi">1024m</span><span class="p">;</span>
-        <span class="kn">client_max_body_size</span> <span class="mi">1024m</span><span class="p">;</span>
-    <span class="p">}</span>
+<span class="w">    </span><span class="kn">location</span><span class="w"> </span><span class="p">~</span><span class="w"> </span><span class="sr">/upload/</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kn">client_body_buffer_size</span><span class="w"> </span><span class="mi">1024m</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="kn">client_max_body_size</span><span class="w"> </span><span class="mi">1024m</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-    <span class="kn">location</span> <span class="p">=</span> <span class="s">/favicon.png</span> <span class="p">{</span>
-        <span class="kn">log_not_found</span> <span class="no">off</span><span class="p">;</span>
-        <span class="kn">access_log</span> <span class="no">off</span><span class="p">;</span>
-    <span class="p">}</span>
+<span class="w">    </span><span class="kn">location</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">/favicon.png</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kn">log_not_found</span><span class="w"> </span><span class="no">off</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="kn">access_log</span><span class="w"> </span><span class="no">off</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-    <span class="kn">location</span> <span class="p">=</span> <span class="s">/robots.txt</span> <span class="p">{</span>
-        <span class="kn">log_not_found</span> <span class="no">off</span><span class="p">;</span>
-        <span class="kn">access_log</span> <span class="no">off</span><span class="p">;</span>
-    <span class="p">}</span>
+<span class="w">    </span><span class="kn">location</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">/robots.txt</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kn">log_not_found</span><span class="w"> </span><span class="no">off</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="kn">access_log</span><span class="w"> </span><span class="no">off</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-    <span class="kn">location</span> <span class="p">~</span><span class="sr">*</span> <span class="s">^.+\.(jpg|jpeg|gif|png|svg|js|css|mp3|ogg|mpe?g|avi|zip|gz|bz2?|rar|eot|otf|ttf|woff|woff2)</span>$ <span class="p">{</span>
-        <span class="kn">log_not_found</span> <span class="no">off</span><span class="p">;</span>
-        <span class="kn">access_log</span> <span class="no">off</span><span class="p">;</span>
-        <span class="kn">expires</span> <span class="s">30d</span><span class="p">;</span>
-        <span class="kn">add_header</span> <span class="s">Cache-Control</span> <span class="s">public</span><span class="p">;</span>
-    <span class="p">}</span>
+<span class="w">    </span><span class="kn">location</span><span class="w"> </span><span class="p">~</span><span class="sr">*</span><span class="w"> </span><span class="s">^.+\.(jpg|jpeg|gif|png|svg|js|css|mp3|ogg|mpe?g|avi|zip|gz|bz2?|rar|eot|otf|ttf|woff|woff2)</span>$<span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kn">log_not_found</span><span class="w"> </span><span class="no">off</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="kn">access_log</span><span class="w"> </span><span class="no">off</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="kn">expires</span><span class="w"> </span><span class="s">30d</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="kn">add_header</span><span class="w"> </span><span class="s">Cache-Control</span><span class="w"> </span><span class="s">public</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-    <span class="kn">location</span> <span class="p">~</span> <span class="sr">(/bitrix/modules|/upload/support/not_image|/bitrix/php_interface|local/modules|local/php_interface)</span> <span class="p">{</span>
-        <span class="kn">deny</span> <span class="s">all</span><span class="p">;</span>
-    <span class="p">}</span>
+<span class="w">    </span><span class="kn">location</span><span class="w"> </span><span class="p">~</span><span class="w"> </span><span class="sr">(/bitrix/modules|/upload/support/not_image|/bitrix/php_interface|local/modules|local/php_interface)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kn">deny</span><span class="w"> </span><span class="s">all</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-    <span class="kn">location</span> <span class="p">~</span> <span class="sr">/.git/</span> <span class="p">{</span>
-        <span class="kn">deny</span> <span class="s">all</span><span class="p">;</span>
-    <span class="p">}</span>
+<span class="w">    </span><span class="kn">location</span><span class="w"> </span><span class="p">~</span><span class="w"> </span><span class="sr">/.git/</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kn">deny</span><span class="w"> </span><span class="s">all</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-    <span class="kn">location</span> <span class="p">~</span> <span class="sr">/vendor/</span> <span class="p">{</span>
-        <span class="kn">deny</span> <span class="s">all</span><span class="p">;</span>
-    <span class="p">}</span>
+<span class="w">    </span><span class="kn">location</span><span class="w"> </span><span class="p">~</span><span class="w"> </span><span class="sr">/vendor/</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kn">deny</span><span class="w"> </span><span class="s">all</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-    <span class="kn">location</span> <span class="p">~</span> <span class="sr">/composer</span> <span class="p">{</span>
-        <span class="kn">deny</span> <span class="s">all</span><span class="p">;</span>
-    <span class="p">}</span>
+<span class="w">    </span><span class="kn">location</span><span class="w"> </span><span class="p">~</span><span class="w"> </span><span class="sr">/composer</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kn">deny</span><span class="w"> </span><span class="s">all</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-    <span class="kn">location</span> <span class="p">~</span> <span class="sr">/.gitignore</span> <span class="p">{</span>
-        <span class="kn">deny</span> <span class="s">all</span><span class="p">;</span>
-    <span class="p">}</span>
+<span class="w">    </span><span class="kn">location</span><span class="w"> </span><span class="p">~</span><span class="w"> </span><span class="sr">/.gitignore</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kn">deny</span><span class="w"> </span><span class="s">all</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-    <span class="kn">error_page</span> <span class="mi">404</span> <span class="s">/404.html</span><span class="p">;</span>
+<span class="w">    </span><span class="kn">error_page</span><span class="w"> </span><span class="mi">404</span><span class="w"> </span><span class="s">/404.html</span><span class="p">;</span><span class="w"></span>
 
-    <span class="kn">location</span> <span class="s">/404.html</span> <span class="p">{</span>
+<span class="w">    </span><span class="kn">location</span><span class="w"> </span><span class="s">/404.html</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 
-    <span class="p">}</span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-<span class="p">}</span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div>
 </details>
                 

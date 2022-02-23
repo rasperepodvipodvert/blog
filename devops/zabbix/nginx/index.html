@@ -17,7 +17,7 @@
         <meta name="author" content="ifilatov">
       
       <link rel="shortcut icon" href="../../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-5.3.2">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-5.3.2">
     
     
       
@@ -1745,19 +1745,21 @@
 <p>Чтобы он заработал, нужно правильно настроить <code>nginx</code> и прописать переменные в <code>zabbix</code> согластно скрину:</p>
 <p><a href="../img/zabbix.png"><img alt="zabbix" src="../img/zabbix.png" /></a></p>
 <p>и прописать конфиг в <code>nginx</code></p>
-<details class="summary"><summary><code>/etc/nginx/site_enabled/nginx_server_status.conf</code></summary><div class="highlight"><pre><span></span><code><span class="k">server</span> <span class="p">{</span>
-  <span class="kn">listen</span> <span class="n">127.0.0.1</span><span class="p">:</span><span class="mi">8885</span><span class="p">;</span>
-  <span class="kn">server_name</span> <span class="s">monitor</span><span class="p">;</span>
+<details class="summary">
+<summary><code>/etc/nginx/site_enabled/nginx_server_status.conf</code></summary>
+<div class="highlight"><pre><span></span><code><span class="k">server</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kn">listen</span><span class="w"> </span><span class="n">127.0.0.1</span><span class="p">:</span><span class="mi">8885</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="kn">server_name</span><span class="w"> </span><span class="s">monitor</span><span class="p">;</span><span class="w"></span>
 
-  <span class="kn">server_name_in_redirect</span> <span class="no">off</span><span class="p">;</span>
-  <span class="kn">access_log</span> <span class="no">off</span><span class="p">;</span>
+<span class="w">  </span><span class="kn">server_name_in_redirect</span><span class="w"> </span><span class="no">off</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="kn">access_log</span><span class="w"> </span><span class="no">off</span><span class="p">;</span><span class="w"></span>
 
-  <span class="kn">location</span>  <span class="s">/</span> <span class="p">{</span>
-    <span class="kn">stub_status</span> <span class="no">on</span><span class="p">;</span>
-    <span class="kn">allow</span> <span class="mi">127</span><span class="s">.0.0.1</span><span class="p">;</span>
-    <span class="kn">deny</span> <span class="s">all</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">}</span>
+<span class="w">  </span><span class="kn">location</span><span class="w">  </span><span class="s">/</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kn">stub_status</span><span class="w"> </span><span class="no">on</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kn">allow</span><span class="w"> </span><span class="mi">127</span><span class="s">.0.0.1</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kn">deny</span><span class="w"> </span><span class="s">all</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div>
 </details>
                 
