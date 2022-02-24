@@ -56,11 +56,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://blog.filatovz.ru/blog/2022-02-24/</loc>
-         <lastmod>2022-02-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://blog.filatovz.ru/blog/2020/06/23/windows_net_time/</loc>
          <lastmod>2022-02-24</lastmod>
          <changefreq>daily</changefreq>
@@ -72,6 +67,11 @@
     </url>
     <url>
          <loc>https://blog.filatovz.ru/blog/2021/02/23/Security%20Links/</loc>
+         <lastmod>2022-02-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://blog.filatovz.ru/blog/2022/02/24/2022-02-24%20-%20test/</loc>
          <lastmod>2022-02-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
