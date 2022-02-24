@@ -1,5 +1,5 @@
 # Project information
-site_name: СИСADМИН.blog
+site_name: blog.filatovz.ru
 site_description: Собираю стеки (docker, swarm, docker-compose). Пишу автоматизации
 site_author: ifilatov
 site_url: https://blog.filatovz.ru
@@ -33,7 +33,7 @@ plugins:
   - awesome-pages
   - roamlinks
   - blog:
-      format: "(%m/%d/%y)"
+      format: "%Y-%m-%d"
       text-align: "left"
 extra:
   search:
