@@ -8,11 +8,18 @@ tags: [soft]
 
 ## Video на тему
 
+
 ```ad-info
 title: Картотека или база знаний
-<iframe width="560" height="315" src="https://www.youtube.com/embed/TDwOUsRRoKE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+collapse: closed
+
+...
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/TDwOUsRRoKE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ```
 
 ```ad-info
-<iframe width="560" height="315" src="https://www.youtube.com/embed/PiS3pRRj994" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+title: Про zettelkasten в Obsidian
+collapse: closed
+...
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/PiS3pRRj994" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ```
